@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'hotel.apps.HotelConfig',
     'user_dashboard.apps.UserDashboardConfig',
+    'addon.apps.AddonConfig',
 ]
 
 MIDDLEWARE = [
