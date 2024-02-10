@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'taggit',
     'import_export',
     'mathfilters',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
