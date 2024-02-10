@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Custom apps
     'account.apps.AccountConfig',
+    'hotel.apps.HotelConfig',
 ]
 
 MIDDLEWARE = [
