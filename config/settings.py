@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     # Third party apps
     'taggit',
+    'import_export',
 ]
 
 MIDDLEWARE = [
