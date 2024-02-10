@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'ckeditor_uploader',
     'django_ckeditor_5',
+    
 ]
 
 MIDDLEWARE = [
