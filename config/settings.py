@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'mathfilters',
     'crispy_forms',
     'ckeditor_uploader',
+    'django_ckeditor_5',
 ]
 
 MIDDLEWARE = [
