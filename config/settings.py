@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'taggit',
     'import_export',
     'mathfilters',
-    'crispy_forms'
+    'crispy_forms',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
