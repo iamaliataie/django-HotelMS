@@ -154,5 +154,6 @@ JAZZMIN_SETTINGS = {
         'hotel.Room',
         'hotel.Booking',
         'hotel.BookingDetail',
+        'hotel.Guest',
     }
 }
