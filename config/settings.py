@@ -168,5 +168,6 @@ JAZZMIN_SETTINGS = {
         'hotel.Hotel': 'fas fa-th',
         'hotel.Booking': 'fas fa-calendar-week',
         'hotel.BookingDetail': 'fas fa-calendar-alt',
+        'hotel.Guest': 'fas fa-user',
     }
 }
