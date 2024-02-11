@@ -171,5 +171,6 @@ JAZZMIN_SETTINGS = {
         'hotel.Guest': 'fas fa-user',
         'hotel.Room': 'fas fa-bed',
         'hotel.RoomServices': 'fas fa-user-cog',
+        'hotel.Notification': 'fas fa-bell',
     }
 }
