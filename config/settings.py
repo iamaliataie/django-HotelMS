@@ -137,3 +137,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    'site_header': 'Hotel Management System',
+    'copyright': 'All Rights Reserved 2024',
+    'welcome_sign': 'Welcome to HMS Django'
+}
