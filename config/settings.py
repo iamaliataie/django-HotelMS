@@ -160,6 +160,6 @@ JAZZMIN_SETTINGS = {
         'addons',
     ],
     'icons': {
-        
+        'admin.LogEntry': 'fas fa-file'
     }
 }
