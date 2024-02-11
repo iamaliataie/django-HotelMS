@@ -167,5 +167,6 @@ JAZZMIN_SETTINGS = {
         'account.Profile': 'fas fa-address-card',
         'hotel.Hotel': 'fas fa-th',
         'hotel.Booking': 'fas fa-calendar-week',
+        'hotel.BookingDetail': 'fas fa-calendar-alt',
     }
 }
