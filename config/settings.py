@@ -145,5 +145,6 @@ JAZZMIN_SETTINGS = {
     'topmenu_links': [
         {'name': 'Home', 'url': 'admin:index', 'permission': ['auth.view_user']},
         {'name': 'Company', 'url': '/admin/addons/company/'},
+        {'name': 'Users', 'url': '/admin/userauth/uer/'}
     ]
 }
