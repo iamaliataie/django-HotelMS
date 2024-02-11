@@ -148,7 +148,7 @@ JAZZMIN_SETTINGS = {
         {'name': 'Users', 'url': '/admin/userauth/uer/'},
         {'model': 'AUTH_USER_MODEL.User'}
     ],
-    'order_with_respect_to':{
+    'order_with_respect_to':[
         'hotel',
         'hotel.Hotel',
         'hotel.Room',
@@ -158,5 +158,5 @@ JAZZMIN_SETTINGS = {
         'hotel.RoomServices',
         'account',
         'addons',
-    }
+    ],
 }
