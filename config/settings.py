@@ -157,5 +157,6 @@ JAZZMIN_SETTINGS = {
         'hotel.Guest',
         'hotel.RoomServices',
         'account',
+        'addons',
     }
 }
