@@ -174,5 +174,6 @@ JAZZMIN_SETTINGS = {
         'hotel.Notification': 'fas fa-bell',
         'hotel.Coupon': 'fas fa-tag',
         'hotel.Bookmark': 'fas fa-heart'
-    }
+    },
+    'show_ui_builder': True
 }
