@@ -165,5 +165,6 @@ JAZZMIN_SETTINGS = {
         'auth.user': 'fas fa-user',
         'account.User': 'fas fa-user',
         'account.Profile': 'fas fa-address-card',
+        'hotel.Hotel': 'fas fa-th',
     }
 }
