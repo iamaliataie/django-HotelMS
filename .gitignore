@@ -1,4 +1,6 @@
 # Created by https://www.gitignore.io
+# Custom
+*.sh
 
 ### OSX ###
 .DS_Store

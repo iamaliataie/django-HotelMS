@@ -31,12 +31,28 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Custom apps
+    'account.apps.AccountConfig',
+    'hotel.apps.HotelConfig',
+    'user_dashboard.apps.UserDashboardConfig',
+    'addon.apps.AddonConfig',
+
+    # Third party apps
+    'taggit',
+    'import_export',
+    'mathfilters',
+    'crispy_forms',
+    'ckeditor_uploader',
+    'django_ckeditor_5',
+    
 ]
 
 MIDDLEWARE = [
@@ -121,3 +137,43 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    'site_header': 'Hotel Management System',
+    'copyright': 'All Rights Reserved 2024',
+    'welcome_sign': 'Welcome to HMS Django',
+    'topmenu_links': [
+        {'name': 'Home', 'url': 'admin:index', 'permission': ['auth.view_user']},
+        {'name': 'Company', 'url': '/admin/addons/company/'},
+        {'name': 'Users', 'url': '/admin/userauth/uer/'},
+        {'model': 'AUTH_USER_MODEL.User'}
+    ],
+    'order_with_respect_to':[
+        'hotel',
+        'hotel.Hotel',
+        'hotel.Room',
+        'hotel.Booking',
+        'hotel.BookingDetail',
+        'hotel.Guest',
+        'hotel.RoomServices',
+        'account',
+        'addons',
+    ],
+    'icons': {
+        'admin.LogEntry': 'fas fa-file',
+        'auth': 'fas fa-users-cog',
+        'auth.user': 'fas fa-user',
+        'account.User': 'fas fa-user',
+        'account.Profile': 'fas fa-address-card',
+        'hotel.Hotel': 'fas fa-th',
+        'hotel.Booking': 'fas fa-calendar-week',
+        'hotel.BookingDetail': 'fas fa-calendar-alt',
+        'hotel.Guest': 'fas fa-user',
+        'hotel.Room': 'fas fa-bed',
+        'hotel.RoomServices': 'fas fa-user-cog',
+        'hotel.Notification': 'fas fa-bell',
+        'hotel.Coupon': 'fas fa-tag',
+        'hotel.Bookmark': 'fas fa-heart'
+    },
+    'show_ui_builder': True
+}
