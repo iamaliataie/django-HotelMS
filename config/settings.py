@@ -144,6 +144,6 @@ JAZZMIN_SETTINGS = {
     'welcome_sign': 'Welcome to HMS Django',
     'topmenu_links': [
         {'name': 'Home', 'url': 'admin:index', 'permission': ['auth.view_user']},
-
+        {'name': 'Company', 'url': '/admin/addons/company/'},
     ]
 }
