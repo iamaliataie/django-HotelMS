@@ -162,5 +162,6 @@ JAZZMIN_SETTINGS = {
     'icons': {
         'admin.LogEntry': 'fas fa-file',
         'auth': 'fas fa-users-cog',
+        'auth.user': 'fas fa-user',
     }
 }
