@@ -170,5 +170,6 @@ JAZZMIN_SETTINGS = {
         'hotel.BookingDetail': 'fas fa-calendar-alt',
         'hotel.Guest': 'fas fa-user',
         'hotel.Room': 'fas fa-bed',
+        'hotel.RoomServices': 'fas fa-user-cog',
     }
 }
