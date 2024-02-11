@@ -163,5 +163,6 @@ JAZZMIN_SETTINGS = {
         'admin.LogEntry': 'fas fa-file',
         'auth': 'fas fa-users-cog',
         'auth.user': 'fas fa-user',
+        'account.User': 'fas fa-user',
     }
 }
