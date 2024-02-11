@@ -164,5 +164,6 @@ JAZZMIN_SETTINGS = {
         'auth': 'fas fa-users-cog',
         'auth.user': 'fas fa-user',
         'account.User': 'fas fa-user',
+        'account.Profile': 'fas fa-address-card',
     }
 }
