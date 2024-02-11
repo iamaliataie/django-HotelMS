@@ -149,6 +149,6 @@ JAZZMIN_SETTINGS = {
         {'model': 'AUTH_USER_MODEL.User'}
     ],
     'order_with_respect_to':{
-        
+        'hotel',
     }
 }
