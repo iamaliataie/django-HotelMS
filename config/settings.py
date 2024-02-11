@@ -150,5 +150,6 @@ JAZZMIN_SETTINGS = {
     ],
     'order_with_respect_to':{
         'hotel',
+        'hotel.Hotel',
     }
 }
