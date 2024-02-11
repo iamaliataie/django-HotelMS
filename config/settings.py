@@ -159,4 +159,7 @@ JAZZMIN_SETTINGS = {
         'account',
         'addons',
     ],
+    'icons': {
+        
+    }
 }
