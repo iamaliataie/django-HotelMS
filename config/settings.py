@@ -146,6 +146,7 @@ JAZZMIN_SETTINGS = {
         {'name': 'Home', 'url': 'admin:index', 'permission': ['auth.view_user']},
         {'name': 'Company', 'url': '/admin/addons/company/'},
         {'name': 'Users', 'url': '/admin/userauth/uer/'},
+        
         {'model': 'AUTH_USER_MODEL.User'}
     ],
     'order_with_respect_to':[
