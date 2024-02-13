@@ -203,5 +203,6 @@ JAZZMIN_UI_TWEAKS = {
     'dark_mode_theme': 'cyborg',
     'button_classes': {
         'primary': 'btn-primary',
+        'secondary': 'btn-secondary',
     }
 }
