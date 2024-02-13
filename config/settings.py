@@ -189,4 +189,5 @@ JAZZMIN_UI_TWEAKS = {
     'navbar': 'navbar-indigo nabvar-dark',
     'no_navbar_border': False,
     'navbar_fixed': False,
+    'layout_boxed': False,
 }
