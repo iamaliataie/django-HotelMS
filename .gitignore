@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io
 # Custom
 *.sh
+venv/
 
 ### OSX ###
 .DS_Store
