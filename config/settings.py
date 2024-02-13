@@ -184,4 +184,5 @@ JAZZMIN_UI_TWEAKS = {
     'footer_small_text': False,
     'body_small_text': True,
     'brand_small_text': False,
+    'brand_colour': 'navbar_indigo',
 }
