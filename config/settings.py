@@ -201,5 +201,7 @@ JAZZMIN_UI_TWEAKS = {
     'sidebar_nav_legacy_style': False,
     'theme': 'cyborg',
     'dark_mode_theme': 'cyborg',
-    'button_classes': {}
+    'button_classes': {
+        'primary': 'btn-primary',
+    }
 }
