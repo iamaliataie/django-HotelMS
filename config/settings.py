@@ -193,4 +193,5 @@ JAZZMIN_UI_TWEAKS = {
     'footer_fixed': False,
     'sidebar_fixed': False,
     'sidebar': 'sidebar-dark-indigo',
+    'sidebar_nav_small_text': False,
 }
