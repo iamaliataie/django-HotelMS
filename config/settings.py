@@ -140,6 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
     'site_header': 'Hotel Management System',
+    'site_brand': 'Hotel Management',
     'copyright': 'All Rights Reserved 2024',
     'welcome_sign': 'Welcome to HMS Django',
     'topmenu_links': [
