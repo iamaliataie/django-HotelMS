@@ -204,5 +204,6 @@ JAZZMIN_UI_TWEAKS = {
     'button_classes': {
         'primary': 'btn-primary',
         'secondary': 'btn-secondary',
+        'info': 'btn-info',
     }
 }
