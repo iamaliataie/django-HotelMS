@@ -182,4 +182,5 @@ JAZZMIN_SETTINGS = {
 JAZZMIN_UI_TWEAKS = {
     'navbar_small_text': False,
     'footer_small_text': False,
+    'body_small_text': True,
 }
