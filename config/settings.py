@@ -206,5 +206,6 @@ JAZZMIN_UI_TWEAKS = {
         'secondary': 'btn-secondary',
         'info': 'btn-info',
         'warning': 'btn-warning',
+        'danger': 'btn-danger',
     }
 }
