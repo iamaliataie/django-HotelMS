@@ -199,4 +199,5 @@ JAZZMIN_UI_TWEAKS = {
     'sidebar_nav_compact_style': False,
     'sidebar_nav_flat_style': False,
     'sidebar_nav_legacy_style': False,
+    'theme': 'cyborg',
 }
