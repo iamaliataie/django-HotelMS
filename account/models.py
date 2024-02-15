@@ -52,3 +52,4 @@ class Profile(models.Model):
     identity_image = models.FileField(upload_to=user_directory_path, default='id.jpg', null=True, blank=True)
     facebook = models.URLField(null=True, blank=True)
     twitter = models.URLField(null=True, blank=True)
+    wallet = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
