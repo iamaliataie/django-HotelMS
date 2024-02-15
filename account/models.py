@@ -10,6 +10,11 @@ GENDER = (
     ('Other', 'Other')
 )
 
+def user_directory_path(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = f'{instance.user.id}.{ext}'
+    return f'user_{instance.user.id}/{filename}'
+
 class User(AbstractUser):
     full_name = models.CharField(max_length=500, null=True, blank=True)
     username = models.CharField(max_length=500, unique=True)
