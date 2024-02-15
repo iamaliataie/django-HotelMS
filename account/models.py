@@ -16,3 +16,5 @@ class User(AbstractUser):
     phone = models.CharField(max_length=100, null=True, blank=True)
     gender = models.CharField(max_length=20, choices=GENDER, default='Other')
     otp = models.CharField(max_length=100, null=True, blank=True)
+
+    USERNAME_FIELD=['email']
