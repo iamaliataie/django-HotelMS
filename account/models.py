@@ -63,3 +63,6 @@ class Profile(models.Model):
         if self.full_name:
             return self.full_name
         return self.user.username
+    
+def create_user_profile(sender, instance, created, **kwargs):
+    if created: Profile.objects.create(user=instance)
