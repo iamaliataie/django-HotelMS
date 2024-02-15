@@ -38,3 +38,4 @@ class Profile(models.Model):
     phone = models.CharField(max_length=100, null=True, blank=True)
     gender = models.CharField(max_length=20, choices=GENDER, default='Other')
     country = models.CharField(max_length=100, null=True, blank=True)
+    city = models.CharField(max_length=100, null=True, blank=True)
