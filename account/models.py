@@ -41,3 +41,5 @@ class Profile(models.Model):
     city = models.CharField(max_length=100, null=True, blank=True)
     state = models.CharField(max_length=100, null=True, blank=True)
     address = models.CharField(max_length=1000, null=True, blank=True)
+    gender = models.CharField(max_length=20, choices=GENDER, default='Other')
+    identity_type = models.CharField(max_length=20, choices=IDENTITY_TYPE, default='NIN')
