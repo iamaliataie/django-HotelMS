@@ -29,7 +29,7 @@ class User(AbstractUser):
     gender = models.CharField(max_length=20, choices=GENDER, default='Other')
     otp = models.CharField(max_length=100, null=True, blank=True)
 
-    USERNAME_FIELD=['email']
+    USERNAME_FIELD= 'email'
     REQUIRED_FIELDS = ['username']
 
     def __str__(self):
