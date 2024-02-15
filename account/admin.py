@@ -8,3 +8,4 @@ class UserAdmin(admin.ModelAdmin):
 
 class ProfileAdmin(admin.ModelAdmin):
     search_fields = ['full_name', 'user__username']
+    list_display = ['full_name', 'user', 'verified']
