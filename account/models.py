@@ -27,3 +27,4 @@ class User(AbstractUser):
 
 class Profile(models.Model):
     pid = ShortUUIDField(length=7, max_length=25, alphabets='abcdefghijklmnopqrstuvwxyz123')
+    image = models.FileField(upload_to=user_directory_path, default='default.jpg')
