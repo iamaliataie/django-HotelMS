@@ -34,3 +34,4 @@ class Profile(models.Model):
     pid = ShortUUIDField(length=7, max_length=25, alphabets='abcdefghijklmnopqrstuvwxyz123')
     image = models.FileField(upload_to=user_directory_path, default='default.jpg')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=500, null=True, blank=True)
