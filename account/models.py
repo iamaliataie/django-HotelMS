@@ -53,3 +53,4 @@ class Profile(models.Model):
     facebook = models.URLField(null=True, blank=True)
     twitter = models.URLField(null=True, blank=True)
     wallet = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    verified = models.BooleanField(default=False)
