@@ -3,6 +3,12 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
+GENDER = (
+    ('Female', 'Female'),
+    ('Male', 'Male'),
+    ('Other', 'Other')
+)
+
 class User(AbstractUser):
     full_name = models.CharField(max_length=500, null=True, blank=True)
     username = models.CharField(max_length=500, unique=True)
