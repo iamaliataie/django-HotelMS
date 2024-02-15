@@ -58,3 +58,6 @@ class Profile(models.Model):
 
     class Meta:
         ordering = ['-date']
+
+    def __str__(self):
+        
