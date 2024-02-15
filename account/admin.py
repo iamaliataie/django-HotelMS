@@ -11,3 +11,4 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display = ['full_name', 'user', 'verified']
 
 admin.site.regiser(User, UserAdmin)
+admin.site.regiser(Profile, ProfileAdmin)
