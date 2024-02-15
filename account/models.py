@@ -10,6 +10,12 @@ GENDER = (
     ('Other', 'Other')
 )
 
+IDENTITY_TYPE = (
+    ('NIN', 'National Identication Number'),
+    ('DL', 'Driving License'),
+    ('IP', 'International Passport'),
+)
+
 def user_directory_path(instance, filename):
     ext = filename.split('.')[-1]
     filename = f'{instance.user.id}.{ext}'
