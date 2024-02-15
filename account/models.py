@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+from shortuuid.django_fields import ShortUUIDField
 # Create your models here.
 
 GENDER = (
@@ -22,3 +23,5 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+
+
