@@ -49,3 +49,4 @@ class Profile(models.Model):
     address = models.CharField(max_length=1000, null=True, blank=True)
     gender = models.CharField(max_length=20, choices=GENDER, default='Other')
     identity_type = models.CharField(max_length=20, choices=IDENTITY_TYPE, default='NIN', null=True, blank=True)
+    identity_image = models.FileField(upload_to=user_directory_path, default='id.jpg', null=True, blank=True)
