@@ -37,3 +37,4 @@ class Profile(models.Model):
     full_name = models.CharField(max_length=500, null=True, blank=True)
     phone = models.CharField(max_length=100, null=True, blank=True)
     gender = models.CharField(max_length=20, choices=GENDER, default='Other')
+    country = models.CharField(max_length=100, null=True, blank=True)
