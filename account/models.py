@@ -26,3 +26,4 @@ class User(AbstractUser):
 
 
 class Profile(models.Model):
+    pid = ShortUUIDField(length=7, max_length=25, alphabets='abcdefghijklmnopqrstuvwxyz123')
