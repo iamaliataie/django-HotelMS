@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.contrib.auth import authenticate
 
 from account.models import User, Profile
 from account.forms import UserRegistrationForm
@@ -13,6 +13,8 @@ def register(request):
         phone = form.cleaned_data.get('phone')
         email = form.cleaned_data.get('email')
         password = form.cleaned_data.get('password')
+
+        user = authe
     context = {
         'form': form
     }
