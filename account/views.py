@@ -17,7 +17,7 @@ def register(request):
 
         user = authenticate(email=email, password=password)
         login(user)
-        mess
+        messages.success(request, f'Hey {full_name}, your account has been created succussfully.')
 
     context = {
         'form': form
