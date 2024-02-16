@@ -14,7 +14,7 @@ def register(request):
         email = form.cleaned_data.get('email')
         password = form.cleaned_data.get('password')
 
-        user = authe
+        user = authenticate(email=email, password=password)
     context = {
         'form': form
     }
