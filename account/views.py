@@ -4,4 +4,4 @@ from account.forms import UserRegistrationForm
 # Create your views here.
 
 def RegisterView(request):
-    pass
+    form = UserRegistrationForm()
