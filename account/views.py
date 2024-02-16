@@ -9,7 +9,7 @@ def register(request):
     form = UserRegistrationForm()
     
     if form.is_valid():
-
+        full_name = form.cleaned_data.get('full_name')
     context = {
         'form': form
     }
