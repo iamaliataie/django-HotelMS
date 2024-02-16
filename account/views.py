@@ -10,6 +10,7 @@ def register(request):
     
     if form.is_valid():
         full_name = form.cleaned_data.get('full_name')
+        phone = form.cleaned_data.get('phone')
     context = {
         'form': form
     }
