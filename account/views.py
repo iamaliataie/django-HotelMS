@@ -12,7 +12,7 @@ def register(request):
         full_name = form.cleaned_data.get('full_name')
         phone = form.cleaned_data.get('phone')
         email = form.cleaned_data.get('email')
-        
+        password = form.cleaned_data.get('password')
     context = {
         'form': form
     }
