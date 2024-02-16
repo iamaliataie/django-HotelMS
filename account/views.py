@@ -3,7 +3,7 @@ from account.models import User, Profile
 from account.forms import UserRegistrationForm
 # Create your views here.
 
-def RegisterView(request):
+def register(request):
     form = UserRegistrationForm()
     context = {
         'form': form
