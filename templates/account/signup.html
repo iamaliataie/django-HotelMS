@@ -6,6 +6,10 @@
     <title>Signup</title>
 </head>
 <body>
-    
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">submit</button>
+    </form>
 </body>
 </html>
