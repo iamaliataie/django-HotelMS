@@ -5,3 +5,6 @@ from account.forms import UserRegistrationForm
 
 def RegisterView(request):
     form = UserRegistrationForm()
+    context = {
+        'form': form
+    }
