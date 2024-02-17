@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 
@@ -7,6 +7,8 @@ from account.forms import UserRegistrationForm
 # Create your views here.
 
 def register(request):
+    if request.user.is_authenticated:
+        messages.warning(request, 'You are already logged in.')
     form = UserRegistrationForm(request.POST or None)
     if form.is_valid():
         form.save()
@@ -18,6 +20,12 @@ def register(request):
         user = authenticate(email=email, password=password)
         login(request, user)
         messages.success(request, f'Hey {full_name}, your account has been created succussfully.')
+
+        profile = Profile.objects.get(user=request.user)
+        profile.full_name = full_name
+        profile.phone = phone
+        profile.save()
+        return redirect('hotel:home')
 
     context = {
         'form': form
