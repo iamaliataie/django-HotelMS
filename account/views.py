@@ -23,6 +23,7 @@ def register(request):
         profile.full_name = full_name
         profile.phone = phone
         profile.save()
+        return redirect('/')
 
     context = {
         'form': form
