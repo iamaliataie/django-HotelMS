@@ -21,6 +21,7 @@ def register(request):
 
         profile = Profile.objects.get(user=request.user)
         profile.full_name = full_name
+        profile.phone = phone
 
     context = {
         'form': form
