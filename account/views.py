@@ -19,6 +19,8 @@ def register(request):
         login(request, user)
         messages.success(request, f'Hey {full_name}, your account has been created succussfully.')
 
+        profile = Profile.objects.get(user=request.user)
+
     context = {
         'form': form
     }
