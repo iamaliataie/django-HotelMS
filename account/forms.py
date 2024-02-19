@@ -5,6 +5,7 @@ from .models import User, Profile
 class UserRegistrationForm(UserCreationForm):
     full_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Enter full name'}))
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Username'}))
+    emial = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'Email Address'}))
     class Meta:
         model = User
         fields = ['full_name', 'username', 'phone', 'email', 'password1', 'password2']
