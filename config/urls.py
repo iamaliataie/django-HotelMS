@@ -24,3 +24,5 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('', include('hotel.urls'), name='hotel'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
