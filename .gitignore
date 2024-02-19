@@ -2,6 +2,7 @@
 # Custom
 *.sh
 venv/
+.vscode/
 
 ### OSX ###
 .DS_Store
