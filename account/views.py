@@ -43,5 +43,6 @@ def login(request):
         passowrd = request.POST.get('password')
 
         try:
-            user = User.objects.get(email=email)
+            user = authenticate(request, email=email, passowrd=passowrd)
+
         except:
