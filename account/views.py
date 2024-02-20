@@ -51,8 +51,8 @@ def login(request):
                 return redirect(next_url)
             else:
                 messages.error(request, 'Username or password does not exist')
-                return redirect('hotel:home')
+                return redirect('account:login')
         except:
             messages.error(request, 'Username or password does not exist')
-            return redirect('hotel:home')
+            return redirect('hotel:login')
     return render(request, 'account/login.html')
