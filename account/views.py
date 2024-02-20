@@ -46,5 +46,6 @@ def login(request):
             user = authenticate(request, email=email, passowrd=passowrd)
             if user:
                 login(request, user)
+                messages.success()
 
         except:
