@@ -50,4 +50,4 @@ def login(request):
                 next_url = request.GET.get('next', 'hotel:home')
                 return redirect(next_url)
         except:
-            messages.error()
+            messages.error(request)
