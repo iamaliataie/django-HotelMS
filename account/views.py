@@ -9,6 +9,7 @@ from account.forms import UserRegistrationForm
 def register(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are already logged in.')
+        return
     form = UserRegistrationForm(request.POST or None)
     if form.is_valid():
         form.save()
