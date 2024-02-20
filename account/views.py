@@ -33,4 +33,5 @@ def register(request):
     return render(request, 'account/signup.html', context)
 
 def login(request):
-    pass
+    if request.user.is_authenticated:
+        
