@@ -34,4 +34,4 @@ def register(request):
 
 def login(request):
     if request.user.is_authenticated:
-        messages.warning(request)
+        messages.warning(request, 'You are logged in.')
