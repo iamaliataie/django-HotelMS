@@ -31,3 +31,6 @@ def register(request):
         'form': form
     }
     return render(request, 'account/signup.html', context)
+
+def login(request):
+    pass
