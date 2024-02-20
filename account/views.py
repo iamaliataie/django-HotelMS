@@ -50,7 +50,7 @@ def login(request):
                 next_url = request.GET.get('next', 'hotel:home')
                 return redirect(next_url)
             else:
-                messages.error()
+                messages.error(request)
         except:
             messages.error(request, 'Username or password does not exist')
             return redirect('hotel:home')
