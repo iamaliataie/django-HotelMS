@@ -51,3 +51,4 @@ def login(request):
                 return redirect(next_url)
         except:
             messages.error(request, 'Username or password does not exist')
+            return
