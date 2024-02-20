@@ -45,5 +45,6 @@ def login(request):
         try:
             user = authenticate(request, email=email, passowrd=passowrd)
             if user:
+                login(request, user)
 
         except:
