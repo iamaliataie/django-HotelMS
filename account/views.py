@@ -39,3 +39,4 @@ def login(request):
         return redirect('hotel:home')
     
     if request.method == 'POST':
+        email = request.POST.get('email')
