@@ -48,5 +48,5 @@ def login(request):
                 login(request, user)
                 messages.success(request, 'Welcome back.')
                 next_url = request.GET.get('next', 'hotel:home')
-
+                return 
         except:
