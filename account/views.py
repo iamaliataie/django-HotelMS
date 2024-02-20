@@ -55,3 +55,4 @@ def login(request):
         except:
             messages.error(request, 'Username or password does not exist')
             return redirect('hotel:home')
+    return
