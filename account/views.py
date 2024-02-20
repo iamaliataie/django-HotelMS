@@ -34,4 +34,4 @@ def register(request):
 
 def login(request):
     if request.user.is_authenticated:
-        messages.warning()
+        messages.warning(request)
