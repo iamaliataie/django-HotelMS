@@ -59,4 +59,4 @@ def login(request):
 
 def logout(request):
     logout(request)
-    messages.success(request)
+    messages.success(request, 'You have been logged out')
