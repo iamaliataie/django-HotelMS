@@ -60,4 +60,4 @@ def login(request):
 def logout(request):
     logout(request)
     messages.success(request, 'You have been logged out')
-    return redirect()
+    return redirect('account:login')
