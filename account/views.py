@@ -57,7 +57,7 @@ def login(request):
             return redirect('account:login')
     return render(request, 'account/login.html')
 
-def logout(request):
+def logout_view(request):
     logout(request)
     messages.success(request, 'You have been logged out')
     return redirect('account:login')
