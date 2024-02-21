@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 from account.models import User, Profile
@@ -33,17 +33,17 @@ def register(request):
     }
     return render(request, 'account/signup.html', context)
 
-def login(request):
+def login_view(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are logged in.')
         return redirect('hotel:home')
     
     if request.method == 'POST':
         email = request.POST.get('email')
-        passowrd = request.POST.get('password')
+        password = request.POST.get('password')
 
         try:
-            user = authenticate(request, email=email, passowrd=passowrd)
+            user = authenticate(request, email=email, password=password)
             if user:
                 login(request, user)
                 messages.success(request, 'Welcome back.')
@@ -56,3 +56,8 @@ def login(request):
             messages.error(request, 'Username or password does not exist')
             return redirect('account:login')
     return render(request, 'account/login.html')
+
+def logout_view(request):
+    logout(request)
+    messages.success(request, 'You have been logged out')
+    return redirect('account:login')

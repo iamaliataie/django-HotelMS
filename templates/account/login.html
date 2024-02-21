@@ -7,5 +7,16 @@
 </head>
 <body>
     <h1>Login Page</h1>
+    
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+        
+    <form method="post">
+        {% csrf_token %}
+        <input type="email" name="email">
+        <input type="password" name="password" id="">
+        <button type="submit">login</button>
+    </form>
 </body>
 </html>
