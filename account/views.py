@@ -59,3 +59,4 @@ def login(request):
 
 def logout(request):
     logout(request)
+    messages.success()
