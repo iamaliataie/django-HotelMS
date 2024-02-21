@@ -58,4 +58,4 @@ def login(request):
     return render(request, 'account/login.html')
 
 def logout(request):
-    pass
+    logout(request)
