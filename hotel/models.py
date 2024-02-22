@@ -9,3 +9,4 @@ class Hotel(models.Model):
     image = models.FileField(upload_to='hotel_gallery')
     address = models.CharField(max_length==200)
     mobile = models.CharField(max_length=200)
+    email = models.EmailField()
