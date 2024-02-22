@@ -24,3 +24,4 @@ class Hotel(models.Model):
     views = models.IntegerField(default=0)
     featured = models.BooleanField(default=False)
     hid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
+    slug = models.SlugField()
