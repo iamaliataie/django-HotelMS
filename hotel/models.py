@@ -7,6 +7,7 @@ HOTEL_STATUS = (
     ('disabled', 'Disabled'),
     ('rejected', 'Rejected'),
     ('in_review', 'In Review'),
+    ('live', 'Live')
 )
 
 class Hotel(models.Model):
