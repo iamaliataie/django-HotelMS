@@ -36,3 +36,4 @@ class Hotel(models.Model):
         if self.slug == '' or self.slug == None:
             uuid_key = shortuuid.uuid()
             uniqeid = uuid_key[:4]
+            self.slug = slugify(self.name) + '-' + str(uniqeid)
