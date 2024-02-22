@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+import shortuuid
 from shortuuid.django_fields import ShortUUIDField
 from account.models import User
 # Create your models here.
