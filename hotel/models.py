@@ -7,3 +7,4 @@ class Hotel(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
     image = models.FileField(upload_to='hotel_gallery')
+    address = models.CharField()
