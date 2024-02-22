@@ -25,3 +25,4 @@ class Hotel(models.Model):
     featured = models.BooleanField(default=False)
     hid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
     slug = models.SlugField(unique=True)
+    date = models.DateTimeField()
