@@ -35,3 +35,4 @@ class Hotel(models.Model):
     def save(self, *args, **kwargs):
         if self.slug == '' or self.slug == None:
             uuid_key = shortuuid.uuid()
+            uniqeid = uuid_key[:4]
