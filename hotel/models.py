@@ -3,7 +3,8 @@ from account.models import User
 # Create your models here.
 
 HOTEL_STATUS = (
-    ('draft', 'Draft')
+    ('draft', 'Draft'),
+    ('disabled', 'Disabled'),
 )
 
 class Hotel(models.Model):
