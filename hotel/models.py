@@ -5,4 +5,4 @@ from account.models import User
 class Hotel(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL)
     name = models.CharField(max_length=100)
-    description = models.TextField(null=True)
+    description = models.TextField(null=True, blank=True)
