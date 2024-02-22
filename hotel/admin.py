@@ -4,3 +4,5 @@ from .models import Hotel
 
 class HotelAdmin(admin.ModelAdmin):
     list_display = ['thumbnail', 'name', 'user', 'status']
+
+admin.site.register(Hotel, HotelAdmin)
