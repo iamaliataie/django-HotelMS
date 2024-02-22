@@ -23,4 +23,4 @@ class Hotel(models.Model):
     tags = models.CharField(max_length=200, help_text='Seperate tags with commas')
     views = models.IntegerField(default=0)
     featured = models.BooleanField(default=False)
-    hid = ShortUUIDField(unique=True, length=10, max_length=20)
+    hid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
