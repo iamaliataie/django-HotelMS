@@ -2,6 +2,8 @@ from django.db import models
 from account.models import User
 # Create your models here.
 
+HOTEL_STATUS = ()
+
 class Hotel(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=100)
