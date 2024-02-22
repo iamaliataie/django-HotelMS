@@ -5,6 +5,7 @@ from account.models import User
 HOTEL_STATUS = (
     ('draft', 'Draft'),
     ('disabled', 'Disabled'),
+    ('rejected', 'Rejected'),
 )
 
 class Hotel(models.Model):
