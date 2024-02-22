@@ -37,3 +37,4 @@ class Hotel(models.Model):
             uuid_key = shortuuid.uuid()
             uniqeid = uuid_key[:4]
             self.slug = slugify(self.name) + '-' + str(uniqeid)
+        super(Hotel, self).save(*args, **kwargs)
