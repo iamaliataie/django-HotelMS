@@ -40,5 +40,5 @@ class Hotel(models.Model):
             self.slug = slugify(self.name) + '-' + str(uniqeid)
         super(Hotel, self).save(*args, **kwargs)
 
-    def thubmnail(self):
+    def thumbnail(self):
         return mark_safe(f"<img src='{self.image.url}' width='50' height='50' style='object-fit:cover; border-radius:6px; />")
