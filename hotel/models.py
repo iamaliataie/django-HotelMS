@@ -8,4 +8,4 @@ class Hotel(models.Model):
     description = models.TextField(null=True, blank=True)
     image = models.FileField(upload_to='hotel_gallery')
     address = models.CharField(max_length==200)
-    mobile = models.CharField()
+    mobile = models.CharField(max_length=200)
