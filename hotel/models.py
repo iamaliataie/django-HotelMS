@@ -33,3 +33,4 @@ class Hotel(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
+        if self.slug == '' or self.slug == None:
