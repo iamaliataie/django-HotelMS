@@ -10,4 +10,4 @@ class Hotel(models.Model):
     address = models.CharField(max_length==200)
     mobile = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
-    status = models.CharField(max_length=20, choices=HOTEL_STATUS)
+    status = models.CharField(max_length=20, choices=HOTEL_STATUS, default='live')
