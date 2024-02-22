@@ -21,3 +21,4 @@ class Hotel(models.Model):
     email = models.EmailField(max_length=100)
     status = models.CharField(max_length=20, choices=HOTEL_STATUS, default='live')
     tags = models.CharField(max_length=200, help_text='Seperate tags with commas')
+    views = models.IntegerField()
