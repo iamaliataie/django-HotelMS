@@ -102,3 +102,6 @@ class RoomType(models.Model):
 
     class Meta:
         verbose_name_plural = 'Room Types'
+
+    def __str__(self):
+        return f'{self.type} - {self.hotel.name} - {self.price}'
