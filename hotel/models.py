@@ -92,3 +92,4 @@ class HotelFaqs(models.Model):
 
 class RoomType(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
+    type = models.CharField(max_length=10)
