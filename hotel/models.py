@@ -57,4 +57,4 @@ class HotelGallery(models.Model):
     
 
 class HotelFeature(models.Model):
-    hotel = models.ForeignKey()
+    hotel = models.ForeignKey(Hotel)
