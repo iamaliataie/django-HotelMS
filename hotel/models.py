@@ -45,3 +45,4 @@ class Hotel(models.Model):
 
 
 class HotelGallery(models.Model):
+    hotel = models.ForeignKey()
