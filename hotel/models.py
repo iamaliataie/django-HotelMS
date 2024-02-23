@@ -115,3 +115,5 @@ class RoomType(models.Model):
     
     def rooms_count(self):
         Room.objects.filter(room_type=self).count()
+
+class Room(models.Model):
