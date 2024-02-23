@@ -111,3 +111,4 @@ class RoomType(models.Model):
             uuid_key = shortuuid.uuid()
             uniqueid = uuid_key[:4]
             self.slug = slugify(self.hotel.name) + '-' + str(uniqueid).lower()
+            super(RoomType, self).save(*args, **kwargs)
