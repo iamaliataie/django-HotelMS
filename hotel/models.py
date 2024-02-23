@@ -99,3 +99,6 @@ class RoomType(models.Model):
     rtid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
     slug = models.SlugField(unique=True)
     date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Room Types'
