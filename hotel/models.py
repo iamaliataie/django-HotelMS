@@ -110,3 +110,4 @@ class RoomType(models.Model):
         if self.slug == '' or self.slug == None:
             uuid_key = shortuuid.uuid()
             uniqueid = uuid_key[:4]
+            self.slug = slugify(self.hotel.name) + '-' + str(uniqueid).lower()
