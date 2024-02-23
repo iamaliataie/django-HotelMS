@@ -81,3 +81,4 @@ class HotelFaqs(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
     question = models.CharField(max_length=100)
     answer = models.CharField(max_length=100, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
