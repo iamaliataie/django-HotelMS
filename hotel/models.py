@@ -69,3 +69,6 @@ class HotelFeature(models.Model):
     icon_type = models.CharField(max_length=100, null=True, blank=True, choices=ICON_TYPE)
     icon = models.CharField(max_length=100, null=True, blank=True)
     name = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
