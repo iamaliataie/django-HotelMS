@@ -82,3 +82,6 @@ class HotelFaqs(models.Model):
     question = models.CharField(max_length=100)
     answer = models.CharField(max_length=100, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Hotel FAQs'
