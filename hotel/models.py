@@ -95,3 +95,4 @@ class RoomType(models.Model):
     type = models.CharField(max_length=10)
     price = models.DecimalField(max_digits=2, decimal_places=2, default=0.00)
     number_of_beds = models.PositiveIntegerField(default=0)
+    room_capacity = models.PositiveIntegerField(default=0)
