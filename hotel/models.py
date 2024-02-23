@@ -113,5 +113,5 @@ class RoomType(models.Model):
             self.slug = slugify(self.hotel.name) + '-' + str(uniqueid).lower()
             super(RoomType, self).save(*args, **kwargs)
     
-
-class Room(models.Model):
+    def rooms_count(self):
+        Room.objects.filter(room_type=self).count()
