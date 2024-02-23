@@ -78,3 +78,4 @@ class HotelFeature(models.Model):
 
 
 class HotelFaqs(models.Model):
+    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
