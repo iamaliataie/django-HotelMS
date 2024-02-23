@@ -48,3 +48,5 @@ class HotelGallery(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
     image = models.FileField(upload_to='hotel_gallery')
     hgid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
+
+    def __str__(self):
