@@ -121,3 +121,4 @@ class Room(models.Model):
     room_type = models.ForeignKey(RoomType, on_delete=models.CASCADE)
     room_number = models.CharField(max_length=1000)
     is_available = models.BooleanField(default=True)
+    rid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
