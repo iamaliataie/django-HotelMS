@@ -117,3 +117,4 @@ class RoomType(models.Model):
         Room.objects.filter(room_type=self).count()
 
 class Room(models.Model):
+    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
