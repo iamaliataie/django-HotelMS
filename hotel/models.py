@@ -88,3 +88,6 @@ class HotelFaqs(models.Model):
 
     def __str__(self):
         return self.question
+
+
+class RoomType(models.Model):
