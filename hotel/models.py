@@ -50,6 +50,7 @@ class HotelGallery(models.Model):
     hgid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
 
     class Meta:
+        verbose_name_plural = 'Hotel Gallery'
 
     def __str__(self):
         return str(self.hotel.name)
