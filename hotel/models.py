@@ -14,7 +14,13 @@ HOTEL_STATUS = (
     ('live', 'Live')
 )
 
-ICON_TYPE = ()
+ICON_TYPE = (
+    ('Bootstrap Icons', 'Bootstrap Icons')
+    ('Fontawsome Icons', 'Fontawsome Icons')
+    ('Box Icons', 'Box Icons')
+    ('Remi Icons', 'Remi Icons')
+    ('Flat Icons', 'Flat Icons')
+)
 
 class Hotel(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
