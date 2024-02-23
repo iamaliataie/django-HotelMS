@@ -61,7 +61,7 @@ class HotelGallery(models.Model):
         verbose_name_plural = 'Hotel Gallery'
 
     def __str__(self):
-        return str(self.hotel.name)
+        return self.hotel.name
     
 
 class HotelFeature(models.Model):
