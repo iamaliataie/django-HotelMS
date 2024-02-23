@@ -97,3 +97,4 @@ class RoomType(models.Model):
     number_of_beds = models.PositiveIntegerField(default=0)
     room_capacity = models.PositiveIntegerField(default=0)
     rtid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
+    slug = models.SlugField(unique=True)
