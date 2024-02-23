@@ -58,4 +58,4 @@ class HotelGallery(models.Model):
 
 class HotelFeature(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
-    icon_type = models.CharField(max_length=100, null=True, blank=True)
+    icon_type = models.CharField(max_length=100, null=True, blank=True, choices=ICON_TYPE)
