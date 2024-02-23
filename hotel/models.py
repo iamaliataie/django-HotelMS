@@ -98,3 +98,4 @@ class RoomType(models.Model):
     room_capacity = models.PositiveIntegerField(default=0)
     rtid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
     slug = models.SlugField(unique=True)
+    date = models.DateTimeField(auto_now_add=True)
