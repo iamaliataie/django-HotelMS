@@ -122,3 +122,4 @@ class Room(models.Model):
     room_number = models.CharField(max_length=1000)
     is_available = models.BooleanField(default=True)
     rid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
+    date = models.DateTimeField(auto_now_add=True)
