@@ -85,3 +85,6 @@ class HotelFaqs(models.Model):
 
     class Meta:
         verbose_name_plural = 'Hotel FAQs'
+
+    def __str__(self):
+        return self.question
