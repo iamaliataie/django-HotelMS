@@ -55,3 +55,5 @@ class HotelGallery(models.Model):
     def __str__(self):
         return str(self.hotel.name)
     
+
+class HotelFeature(models.Model):
