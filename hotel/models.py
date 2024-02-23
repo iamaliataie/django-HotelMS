@@ -50,3 +50,4 @@ class HotelGallery(models.Model):
     hgid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
 
     def __str__(self):
+        return str(self.hotel.name)
