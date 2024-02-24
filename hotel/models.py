@@ -154,4 +154,4 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     payment_status = models.CharField(max_length=100, choices=PAYMENT_STATUS)
     full_name = models.CharField(max_length=1000)
-    email = models.EmailField()
+    email = models.EmailField(max_length=1000)
