@@ -171,4 +171,4 @@ class Booking(models.Model):
     checked_in_tracker = models.BooleanField(default=False)
     checked_out_tracker = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
-    stripe_payment_intent = models.CharField()
+    stripe_payment_intent = models.CharField(max_length=1000)
