@@ -138,4 +138,4 @@ class Room(models.Model):
 
 
 class Booking(models.Model):
-    user = models.ForeignKey()
+    user = models.ForeignKey(User)
