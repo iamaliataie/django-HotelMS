@@ -25,6 +25,7 @@ ICON_TYPE = (
 PAYMENT_STATUS = (
     ('paid', 'Paid'),
     ('pending', 'Pending'),
+    ('processing', 'Processing'),
 )
 
 class Hotel(models.Model):
