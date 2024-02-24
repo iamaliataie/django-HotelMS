@@ -26,6 +26,7 @@ PAYMENT_STATUS = (
     ('paid', 'Paid'),
     ('pending', 'Pending'),
     ('processing', 'Processing'),
+    ('cancelled', 'Cancelled'),
 )
 
 class Hotel(models.Model):
