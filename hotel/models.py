@@ -15,11 +15,24 @@ HOTEL_STATUS = (
 )
 
 ICON_TYPE = (
-    ('Bootstrap Icons', 'Bootstrap Icons')
-    ('Fontawsome Icons', 'Fontawsome Icons')
-    ('Box Icons', 'Box Icons')
-    ('Remi Icons', 'Remi Icons')
-    ('Flat Icons', 'Flat Icons')
+    ('Bootstrap Icons', 'Bootstrap Icons'),
+    ('Fontawsome Icons', 'Fontawsome Icons'),
+    ('Box Icons', 'Box Icons'),
+    ('Remi Icons', 'Remi Icons'),
+    ('Flat Icons', 'Flat Icons'),
+)
+
+PAYMENT_STATUS = (
+    ('paid', 'Paid'),
+    ('pending', 'Pending'),
+    ('processing', 'Processing'),
+    ('cancelled', 'Cancelled'),
+    ('initiated', 'Initiated'),
+    ('failed', 'Failed'),
+    ('refunding', 'Refunding'),
+    ('refunded', 'Refunded'),
+    ('unpaid', 'Unpaid'),
+    ('expired', 'Expired'),
 )
 
 class Hotel(models.Model):
@@ -135,3 +148,35 @@ class Room(models.Model):
 
     def number_of_beds(self):
         return self.room_type.number_of_beds
+
+
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    payment_status = models.CharField(max_length=100, choices=PAYMENT_STATUS)
+    full_name = models.CharField(max_length=1000)
+    email = models.EmailField(max_length=1000)
+    phone = models.CharField(max_length=1000)
+    hotel = models.ForeignKey(Hotel, on_delete=models.SET_NULL, null=True, blank=True)
+    room_type = models.ForeignKey(RoomType, on_delete=models.SET_NULL, null=True, blank=True)
+    room = models.ManyToManyField(Room)
+    before_discount = models.DecimalField(max_digits=2, decimal_places=2, default=0.00)
+    total = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    saved = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    check_in_date = models.DateField()
+    check_out_date = models.DateField()
+    total_days = models.PositiveIntegerField(default=0)
+    num_adults = models.PositiveIntegerField(default=1)
+    num_children = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=False)
+    checked_in_tracker = models.BooleanField(default=False)
+    checked_out_tracker = models.BooleanField(default=False)
+    date = models.DateTimeField(auto_now_add=True)
+    stripe_payment_intent = models.CharField(max_length=1000, null=True, blank=True)
+    success_id = models.CharField(max_length=1000, null=True, blank=True)
+    booking_id = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
+
+    def __str__(self):
+        return f'{self.booking_id}'
+
+    def rooms(self):
+        return self.room.all().count()
