@@ -164,3 +164,4 @@ class Booking(models.Model):
     saved = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
     check_in_date = models.DateField()
     check_out_date = models.DateField()
+    total_days = models.PositiveIntegerField(default=0)
