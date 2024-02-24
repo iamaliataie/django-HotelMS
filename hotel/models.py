@@ -165,3 +165,4 @@ class Booking(models.Model):
     check_in_date = models.DateField()
     check_out_date = models.DateField()
     total_days = models.PositiveIntegerField(default=0)
+    num_adults = models.PositiveIntegerField(default=1)
