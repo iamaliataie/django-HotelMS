@@ -22,7 +22,9 @@ ICON_TYPE = (
     ('Flat Icons', 'Flat Icons')
 )
 
-PAYMENT_STATUS = ()
+PAYMENT_STATUS = (
+    ('paid', 'Paid'),
+)
 
 class Hotel(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
