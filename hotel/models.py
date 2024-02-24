@@ -159,4 +159,4 @@ class Booking(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.SET_NULL, null=True, blank=True)
     room_type = models.ForeignKey(RoomType, on_delete=models.SET_NULL, null=True, blank=True)
     room = models.ManyToManyField(Room)
-    before_discount = models.DecimalField(max_digits=2, decimal_places=2)
+    before_discount = models.DecimalField(max_digits=2, decimal_places=2, default=0.00)
