@@ -15,11 +15,11 @@ HOTEL_STATUS = (
 )
 
 ICON_TYPE = (
-    ('Bootstrap Icons', 'Bootstrap Icons')
-    ('Fontawsome Icons', 'Fontawsome Icons')
-    ('Box Icons', 'Box Icons')
-    ('Remi Icons', 'Remi Icons')
-    ('Flat Icons', 'Flat Icons')
+    ('Bootstrap Icons', 'Bootstrap Icons'),
+    ('Fontawsome Icons', 'Fontawsome Icons'),
+    ('Box Icons', 'Box Icons'),
+    ('Remi Icons', 'Remi Icons'),
+    ('Flat Icons', 'Flat Icons'),
 )
 
 PAYMENT_STATUS = (
