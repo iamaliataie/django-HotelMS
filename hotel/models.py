@@ -176,3 +176,4 @@ class Booking(models.Model):
     booking_id = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
 
     def __str__(self):
+        return f'{self.booking_id}'
