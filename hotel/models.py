@@ -135,3 +135,6 @@ class Room(models.Model):
 
     def number_of_beds(self):
         return self.room_type.number_of_beds
+
+
+class Booking(models.Model):
