@@ -161,3 +161,4 @@ class Booking(models.Model):
     room = models.ManyToManyField(Room)
     before_discount = models.DecimalField(max_digits=2, decimal_places=2, default=0.00)
     total = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    saved = models.DecimalField()
