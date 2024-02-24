@@ -30,6 +30,7 @@ PAYMENT_STATUS = (
     ('initiated', 'Initiated'),
     ('failed', 'Failed'),
     ('refunding', 'Refunding'),
+    ('refunded', 'Refunded'),
 )
 
 class Hotel(models.Model):
