@@ -167,3 +167,4 @@ class Booking(models.Model):
     total_days = models.PositiveIntegerField(default=0)
     num_adults = models.PositiveIntegerField(default=1)
     num_children = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=False)
