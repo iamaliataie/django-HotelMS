@@ -155,3 +155,4 @@ class Booking(models.Model):
     payment_status = models.CharField(max_length=100, choices=PAYMENT_STATUS)
     full_name = models.CharField(max_length=1000)
     email = models.EmailField(max_length=1000)
+    phone = models.CharField(max_length=1000)
