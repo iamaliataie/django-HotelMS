@@ -7,3 +7,4 @@ class HotelAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 admin.site.register(Hotel, HotelAdmin)
+admin.site.register(Booking)
