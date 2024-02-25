@@ -183,3 +183,4 @@ class Booking(models.Model):
 
 
 class ActivityLog(models.Model):
+    booking = models.ForeignKey()
