@@ -191,3 +191,6 @@ class ActivityLog(models.Model):
 
     def __str__(self):
         return f'{self.booking}'
+
+
+class StaffOnly(models.Model):
