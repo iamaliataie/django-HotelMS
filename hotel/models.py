@@ -180,3 +180,6 @@ class Booking(models.Model):
 
     def rooms(self):
         return self.room.all().count()
+
+
+class ActivityLog(models.Model):
