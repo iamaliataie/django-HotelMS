@@ -193,4 +193,5 @@ class ActivityLog(models.Model):
         return f'{self.booking}'
 
 
-class StaffOnly(models.Model):
+class StaffOnDuty(models.Model):
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
