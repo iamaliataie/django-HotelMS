@@ -197,3 +197,6 @@ class StaffOnDuty(models.Model):
     booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
     staff_id = models.CharField(max_length=100, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.staff_id}'
