@@ -180,3 +180,23 @@ class Booking(models.Model):
 
     def rooms(self):
         return self.room.all().count()
+
+
+class ActivityLog(models.Model):
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+    guess_out = models.DateTimeField()
+    guess_in = models.DateTimeField()
+    description = models.TextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.booking}'
+
+
+class StaffOnDuty(models.Model):
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+    staff_id = models.CharField(max_length=100, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.staff_id}'

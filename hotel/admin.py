@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Hotel
+from .models import Hotel, Booking, ActivityLog, StaffOnDuty, Room, RoomType
 # Register your models here.
 
 class HotelAdmin(admin.ModelAdmin):
@@ -7,3 +7,4 @@ class HotelAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 admin.site.register(Hotel, HotelAdmin)
+admin.site.register(Booking)
