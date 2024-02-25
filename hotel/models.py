@@ -183,4 +183,4 @@ class Booking(models.Model):
 
 
 class ActivityLog(models.Model):
-    booking = models.ForeignKey()
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
