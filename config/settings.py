@@ -220,4 +220,6 @@ JAZZMIN_UI_TWEAKS = {
     }
 }
 
-CKEDITOR_5_CONFIG = {}
+CKEDITOR_5_CONFIG = {
+    'default': {}
+}
