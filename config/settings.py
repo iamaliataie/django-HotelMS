@@ -219,3 +219,19 @@ JAZZMIN_UI_TWEAKS = {
         'success': 'btn-success'
     }
 }
+
+CKEDITOR_5_CONFIG = {
+    'default': {
+        'toolbar': [
+            'heading',
+            '|',
+            'bold',
+            'italic',
+            'link',
+            'bulletedList',
+            'numberedList',
+            'blockQoute',
+            'imageUpload'
+        ]
+    }
+}
