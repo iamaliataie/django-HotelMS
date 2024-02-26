@@ -227,6 +227,7 @@ CKEDITOR_5_CONFIG = {
             '|',
             'bold',
             'italic',
+            'link',
         ]
     }
 }
