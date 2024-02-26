@@ -221,5 +221,7 @@ JAZZMIN_UI_TWEAKS = {
 }
 
 CKEDITOR_5_CONFIG = {
-    'default': {}
+    'default': {
+        'toolbar': []
+    }
 }
