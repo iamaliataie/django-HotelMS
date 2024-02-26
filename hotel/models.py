@@ -3,6 +3,7 @@ from django.utils.text import slugify
 from django.utils.html import mark_safe
 import shortuuid
 from shortuuid.django_fields import ShortUUIDField
+from django_ckeditor_5.fields import CKEditor5Field
 from account.models import User
 # Create your models here.
 
