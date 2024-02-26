@@ -230,6 +230,7 @@ CKEDITOR_5_CONFIG = {
             'link',
             'bulletedList',
             'numberedList',
+            'blockQoute',
         ]
     }
 }
