@@ -225,6 +225,7 @@ CKEDITOR_5_CONFIG = {
         'toolbar': [
             'heading',
             '|',
+            'bold',
         ]
     }
 }
