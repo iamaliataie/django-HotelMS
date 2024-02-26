@@ -224,6 +224,7 @@ CKEDITOR_5_CONFIG = {
     'default': {
         'toolbar': [
             'heading',
+            '|',
         ]
     }
 }
