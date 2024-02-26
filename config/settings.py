@@ -226,6 +226,7 @@ CKEDITOR_5_CONFIG = {
             'heading',
             '|',
             'bold',
+            'italic',
         ]
     }
 }
