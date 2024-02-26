@@ -229,6 +229,7 @@ CKEDITOR_5_CONFIG = {
             'italic',
             'link',
             'bulletedList',
+            'numberedList',
         ]
     }
 }
