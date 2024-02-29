@@ -4,6 +4,7 @@ from django.utils.html import mark_safe
 import shortuuid
 from shortuuid.django_fields import ShortUUIDField
 from django_ckeditor_5.fields import CKEditor5Field
+from taggit.managers import TaggableManager
 from account.models import User
 # Create your models here.
 
