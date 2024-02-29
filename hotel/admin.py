@@ -4,6 +4,7 @@ from .models import Hotel, Booking, ActivityLog, StaffOnDuty, Room, RoomType, Ho
 
 
 class HotelGalleryInline(admin.TabularInline):
+    model = HotelGallery
 
 class HotelAdmin(admin.ModelAdmin):
     list_display = ['thumbnail', 'name', 'user', 'status']
