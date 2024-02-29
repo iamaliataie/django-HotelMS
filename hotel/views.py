@@ -8,4 +8,4 @@ def index(request):
     context = {
         'hotels': hotels
     }
-    return render(request, 'hotel/index.html')
+    return render(request, 'hotel/index.html', context)
