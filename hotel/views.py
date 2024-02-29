@@ -11,3 +11,4 @@ def index(request):
     return render(request, 'hotel/index.html', context)
 
 def hotel_detail(request, slug):
+    hotel = Hotel.objects.get(status='live', slug=slug)
