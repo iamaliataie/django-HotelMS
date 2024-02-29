@@ -1,6 +1,18 @@
 from django.shortcuts import render
+from .models import Hotel, Booking, ActivityLog
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'hotel/index.html')
+    hotels = Hotel.objects.filter(status='live')
+    context = {
+        'hotels': hotels
+    }
+    return render(request, 'hotel/index.html', context)
+
+def hotel_detail(request, slug):
+    hotel = Hotel.objects.get(status='live', slug=slug)
+    context = {
+        'hotel': hotel
+    }
+    return render(request, 'hotel/hotel_detail.html', context)
