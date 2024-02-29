@@ -15,4 +15,4 @@ def hotel_detail(request, slug):
     context = {
         'hotel': hotel
     }
-    return render(request)
+    return render(request, 'hotel/hotel_detail.html')
