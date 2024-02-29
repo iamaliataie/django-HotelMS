@@ -46,7 +46,8 @@ class Hotel(models.Model):
     mobile = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
     status = models.CharField(max_length=20, choices=HOTEL_STATUS, default='live')
-    tags = models.CharField(max_length=200, help_text='Seperate tags with commas')
+    
+    tags = TaggableManager(blank=True)
     views = models.IntegerField(default=0)
     featured = models.BooleanField(default=False)
     hid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
