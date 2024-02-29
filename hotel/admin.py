@@ -7,6 +7,7 @@ class HotelGalleryInline(admin.TabularInline):
     model = HotelGallery
 
 class HotelAdmin(admin.ModelAdmin):
+    inlines = []
     list_display = ['thumbnail', 'name', 'user', 'status']
     prepopulated_fields = {'slug': ('name',)}
 
