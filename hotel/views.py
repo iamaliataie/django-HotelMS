@@ -5,4 +5,5 @@ from .models import Hotel, Booking, ActivityLog
 
 def index(request):
     hotels = Hotel.objects.filter(status='live')
+    context = {}
     return render(request, 'hotel/index.html')
