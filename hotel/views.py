@@ -17,4 +17,4 @@ def hotel_detail(request, slug):
     }
     return render(request, 'hotel/hotel_detail.html', context)
 
-def room_detail(request):
+def room_detail(request, slug):
