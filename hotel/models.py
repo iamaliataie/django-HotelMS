@@ -69,6 +69,9 @@ class Hotel(models.Model):
 
     def hotel_gallery(self):
         return HotelGallery.objects.filter(hotel=self)
+    
+    def hotel_rooms_types(self):
+        return RoomType.objects.filter(hotel=self)
 
 class HotelGallery(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
