@@ -28,4 +28,4 @@ def room_detail(request, slug, rt_slug):
         'rooms': rooms
     }
 
-    return render()
+    return render(request)
