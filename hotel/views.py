@@ -23,5 +23,5 @@ def room_detail(request, slug, rt_slug):
     rooms = Room.objects.filter(room_type=room_type, is_available=True)
 
     context = {
-        
+        'hotel': hotel,
     }
