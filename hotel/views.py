@@ -19,4 +19,4 @@ def hotel_detail(request, slug):
 
 def room_detail(request, slug, rt_slug):
     hotel = Hotel.objects.get(status='live', slug=slug)
-    room_type = RoomType.objects.get(hotel=hotel)
+    room_type = RoomType.objects.get(hotel=hotel, slug=rt_slug)
