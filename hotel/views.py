@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Hotel, Booking, ActivityLog
+from .models import Hotel, Booking, ActivityLog, RoomType
 
 # Create your views here.
 
