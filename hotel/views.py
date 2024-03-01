@@ -27,3 +27,5 @@ def room_detail(request, slug, rt_slug):
         'room_type': room_type,
         'rooms': rooms
     }
+
+    return render()
