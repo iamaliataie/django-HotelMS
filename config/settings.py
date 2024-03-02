@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'hotel.apps.HotelConfig',
     'user_dashboard.apps.UserDashboardConfig',
     'addon.apps.AddonConfig',
+    'booking.apps.BookingConfig',
 
     # Third party apps
     'taggit',
