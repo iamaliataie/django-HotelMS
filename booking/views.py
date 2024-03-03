@@ -17,3 +17,4 @@ def check_room_availability(request):
         checkin = request.POST.get('checkin')
         checkout = request.POST.get('checkout')
         adult = request.POST.get('adult')
+        children = request.POST.get('children')
