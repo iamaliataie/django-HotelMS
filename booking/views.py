@@ -13,3 +13,4 @@ from hotel.models import (
 
 def check_room_availability(request):
     if request.method == 'POST':
+        id = request.POST.get('hotel-id')
