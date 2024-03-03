@@ -7,5 +7,6 @@ from hotel.models import (
     HotelGallery,
     StaffOnDuty,
     Room,
+    RoomType,
 )
 # Create your views here.
