@@ -16,3 +16,4 @@ def check_room_availability(request):
         id = request.POST.get('hotel-id')
         checkin = request.POST.get('checkin')
         checkout = request.POST.get('checkout')
+        adult = request.POST.get('adult')
