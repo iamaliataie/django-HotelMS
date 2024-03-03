@@ -5,6 +5,7 @@ from hotel.models import (
     Booking, 
     ActivityLog,
     HotelGallery,
-    StaffOnDuty
+    StaffOnDuty,
+    Room,
 )
 # Create your views here.
