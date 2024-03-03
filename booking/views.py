@@ -22,3 +22,5 @@ def check_room_availability(request):
 
         hotel = Hotel.objects.get(id=id)
         room_type = RoomType.objects.get(hotel=hotel, slug=room_type)
+
+        url = reverse()
