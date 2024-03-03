@@ -19,3 +19,5 @@ def check_room_availability(request):
         adult = request.POST.get('adult')
         children = request.POST.get('children')
         room_type = request.POST.get('room_type')
+
+        hotel = Hotel.objects.get(id=id)
