@@ -21,3 +21,4 @@ def check_room_availability(request):
         room_type = request.POST.get('room_type')
 
         hotel = Hotel.objects.get(id=id)
+        room_type = RoomType.objects.get(hotel=hotel, slug=room_type)
