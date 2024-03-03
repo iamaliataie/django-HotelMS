@@ -15,3 +15,4 @@ def check_room_availability(request):
     if request.method == 'POST':
         id = request.POST.get('hotel-id')
         checkin = request.POST.get('checkin')
+        checkout = request.POST.get('checkout')
