@@ -1,5 +1,6 @@
 from django.shortcuts import render, render, redirect
 from django.urls import reverse
+from django.http import HttpResponseRedirect
 from hotel.models import (
     Hotel, 
     Booking, 
