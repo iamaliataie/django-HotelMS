@@ -13,6 +13,7 @@ from hotel.models import (
 )
 # Create your views here.
 
+@csrf_exempt
 def check_room_availability(request):
     if request.method == 'POST':
         id = request.POST.get('hotel-id')
