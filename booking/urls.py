@@ -7,7 +7,7 @@ app_name = 'booking'
 urlpatterns = [
     path(
         'check_room_availability/',
-        VIEW.as_view(),
+        views.check_room_availability,
         name=''
     ),
 ]
