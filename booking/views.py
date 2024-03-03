@@ -12,3 +12,4 @@ from hotel.models import (
 # Create your views here.
 
 def check_room_availability(request):
+    if request.method == 'POST':
