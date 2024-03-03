@@ -10,3 +10,5 @@ from hotel.models import (
     RoomType,
 )
 # Create your views here.
+
+def check_room_availability(request):
