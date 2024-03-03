@@ -8,6 +8,6 @@ urlpatterns = [
     path(
         'check_room_availability/',
         views.check_room_availability,
-        name=''
+        name='check_room_availability'
     ),
 ]
