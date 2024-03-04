@@ -11,9 +11,11 @@ def index(request):
 
 def hotel_detail(request, slug):
     hotel = Hotel.objects.get(status='live', slug=slug)
+    
     context = {
         'hotel': hotel
     }
+    
     return render(request, 'hotel/hotel_detail.html', context)
 
 def room_type_detail(request, slug, rt_slug):
