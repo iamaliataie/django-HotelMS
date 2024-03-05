@@ -47,3 +47,4 @@ def add_to_selection(request):
         'children': request.GET['adult'],
     }
     if 'selection_date_obj' in request.session:
+        if str(request.GET['id']) in request.session['selection_date_obj']:
