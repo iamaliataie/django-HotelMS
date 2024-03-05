@@ -43,4 +43,5 @@ def add_to_selection(request):
         'room_id': request.GET['room_id'],
         'checkout': request.GET['checkout'],
         'checkin': request.GET['checkin'],
+        'adult': request.GET['adult'],
     }
