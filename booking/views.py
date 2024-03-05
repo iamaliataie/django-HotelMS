@@ -38,4 +38,5 @@ def add_to_selection(request):
         'room_name': request.GET['room_name'],
         'room_price': request.GET['room_price'],
         'number_of_beds': request.GET['number_of_beds'],
+        'room_number': request.GET['number_of_beds'],
     }
