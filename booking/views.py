@@ -11,7 +11,7 @@ from hotel.models import (
     Room,
     RoomType,
 )
-# Create your views here.
+
 
 @csrf_exempt
 def check_room_availability(request):

@@ -1,12 +1,12 @@
+import shortuuid
 from django.db import models
 from django.utils.text import slugify
 from django.utils.html import mark_safe
-import shortuuid
 from shortuuid.django_fields import ShortUUIDField
 from django_ckeditor_5.fields import CKEditor5Field
 from taggit.managers import TaggableManager
 from account.models import User
-# Create your models here.
+
 
 HOTEL_STATUS = (
     ('draft', 'Draft'),
@@ -46,7 +46,6 @@ class Hotel(models.Model):
     mobile = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
     status = models.CharField(max_length=20, choices=HOTEL_STATUS, default='live')
-    
     tags = TaggableManager(blank=True)
     views = models.IntegerField(default=0)
     featured = models.BooleanField(default=False)
@@ -72,6 +71,7 @@ class Hotel(models.Model):
     
     def hotel_rooms_types(self):
         return RoomType.objects.filter(hotel=self)
+
 
 class HotelGallery(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
@@ -136,6 +136,7 @@ class RoomType(models.Model):
     
     def rooms_count(self):
         Room.objects.filter(room_type=self).count()
+
 
 class Room(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
