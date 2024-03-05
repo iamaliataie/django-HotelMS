@@ -12,7 +12,7 @@ urlpatterns = [
     ),
     path(
         'add_to_selection/',
-        VIEW.as_view(),
+        views.add_to_selection,
         name=''
     ),
 ]
