@@ -1,6 +1,6 @@
 from django.shortcuts import render, render, redirect
 from django.urls import reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from hotel.models import (
     Hotel, 
