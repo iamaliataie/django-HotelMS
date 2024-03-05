@@ -49,3 +49,4 @@ def add_to_selection(request):
     if 'selection_date_obj' in request.session:
         if str(request.GET['id']) in request.session['selection_date_obj']:
             selection_date = request.session['selection_date_obj']
+            selection_date[str(request.GET['id'])]['adult'] = int(room_selection[str(request.GET['id'])]['adult'])
