@@ -31,4 +31,4 @@ def check_room_availability(request):
         return HttpResponseRedirect(url_with_params)
 
 def add_to_selection(request):
-    
+    room_selection = {}
