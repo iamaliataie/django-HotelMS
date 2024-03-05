@@ -61,3 +61,4 @@ def add_to_selection(request):
 
     data = {
         'data': request.session['selection_date_obj'],
+        'fruit': 'banana',
