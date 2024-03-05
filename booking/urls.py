@@ -13,6 +13,6 @@ urlpatterns = [
     path(
         'add_to_selection/',
         views.add_to_selection,
-        name=''
+        name='add_to_selection'
     ),
 ]
