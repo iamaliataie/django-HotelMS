@@ -53,3 +53,4 @@ def add_to_selection(request):
             selection_date[str(request.GET['id'])]['children'] = int(room_selection[str(request.GET['id'])]['children'])
             request.session['selection_date_obj'] = selection_date
         else:
+            selection_date = request.session['selection_date_obj']
