@@ -60,3 +60,4 @@ def add_to_selection(request):
         request.session['selection_date_obj'] = room_selection
 
     data = {
+        'data': request.session['selection_date_obj'],
