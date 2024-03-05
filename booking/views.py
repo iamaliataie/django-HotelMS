@@ -58,3 +58,5 @@ def add_to_selection(request):
             request.session['selection_date_obj'] = selection_date
     else:
         request.session['selection_date_obj'] = room_selection
+
+    data = {
