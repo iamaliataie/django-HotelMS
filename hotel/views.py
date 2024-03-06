@@ -32,4 +32,5 @@ def room_type_detail(request, slug, rt_slug):
     childred = request.GET.get('childred')
 
     context = {
+        'hotel': hotel,
     return render(request, 'hotel/room_type_detail.html', context)
