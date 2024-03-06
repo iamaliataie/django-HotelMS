@@ -35,4 +35,5 @@ def room_type_detail(request, slug, rt_slug):
         'hotel': hotel,
         'room_type': room_type,
         'rooms': rooms,
+        'checkin': checkin,
     return render(request, 'hotel/room_type_detail.html', context)
