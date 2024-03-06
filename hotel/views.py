@@ -28,5 +28,6 @@ def room_type_detail(request, slug, rt_slug):
     id = request.GET.get('hoted-id')
     checkin = request.GET.get('checkin')
     checkout = request.GET.get('checkout')
+    adult = request.GET.get('adult')
 
     return render(request, 'hotel/room_type_detail.html', context)
