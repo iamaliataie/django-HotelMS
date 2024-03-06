@@ -25,4 +25,6 @@ def room_type_detail(request, slug, rt_slug):
     room_type = RoomType.objects.get(hotel=hotel, slug=rt_slug)
     rooms = Room.objects.filter(room_type=room_type, is_available=True)
 
+    id = request.GET.get('hoted-id')
+
     return render(request, 'hotel/room_type_detail.html', context)
