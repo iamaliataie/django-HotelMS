@@ -13,7 +13,6 @@ from hotel.models import (
     RoomType,
 )
 
-
 @csrf_exempt
 def check_room_availability(request):
     if request.method == 'POST':
