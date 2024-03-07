@@ -63,5 +63,4 @@ def add_to_selection(request):
         'name': 'Ali Ahmad Ataie',
         'total_selected_items': request.session['selection_date_obj']
     }
-
     return JsonResponse(data)
