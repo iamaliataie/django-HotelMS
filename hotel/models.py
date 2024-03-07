@@ -42,6 +42,7 @@ class Hotel(models.Model):
     name = models.CharField(max_length=100)
     description = CKEditor5Field(null=True, blank=True, config_name='extends')
     image = models.FileField(upload_to='hotel_gallery')
+    
     address = models.CharField(max_length=200)
     mobile = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
