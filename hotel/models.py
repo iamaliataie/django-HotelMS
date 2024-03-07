@@ -173,6 +173,7 @@ class Room(models.Model):
     def price(self):
         return self.room_type.price
 
+    
     def number_of_beds(self):
         return self.room_type.number_of_beds
 
