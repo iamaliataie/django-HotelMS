@@ -199,6 +199,7 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.booking_id}'
 
+    
     def rooms(self):
         return self.room.all().count()
 
