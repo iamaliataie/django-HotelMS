@@ -195,6 +195,7 @@ class Booking(models.Model):
     success_id = models.CharField(max_length=1000, null=True, blank=True)
     booking_id = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
 
+    
     def __str__(self):
         return f'{self.booking_id}'
 
