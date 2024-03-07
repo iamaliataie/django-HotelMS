@@ -89,6 +89,7 @@ class HotelGallery(models.Model):
     class Meta:
         verbose_name_plural = 'Hotel Gallery'
 
+    
     def __str__(self):
         return self.hotel.name
     
