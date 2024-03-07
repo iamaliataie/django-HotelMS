@@ -142,6 +142,7 @@ class RoomType(models.Model):
 
     def __str__(self):
         return f'{self.type} - {self.hotel.name} - {self.price}'
+        
 
     def save(self, *args, **kwargs):
         if self.slug == '' or self.slug == None:
