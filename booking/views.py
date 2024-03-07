@@ -2,6 +2,7 @@ from django.shortcuts import render, render, redirect
 from django.urls import reverse
 from django.http import HttpResponseRedirect, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+
 from hotel.models import (
     Hotel, 
     Booking, 
@@ -12,7 +13,6 @@ from hotel.models import (
     RoomType,
 )
 
-
 @csrf_exempt
 def check_room_availability(request):
     if request.method == 'POST':
@@ -22,10 +22,8 @@ def check_room_availability(request):
         adult = request.POST.get('adult')
         children = request.POST.get('children')
         room_type = request.POST.get('room_type')
-
         hotel = Hotel.objects.get(id=id)
         room_type = RoomType.objects.get(hotel=hotel, slug=room_type)
-
         url = reverse('hotel:room_type_detail', args=[hotel.slug, room_type.slug])
         url_with_params = f'{url}?hotel-id={id}&checkin={checkin}&checkout={checkout}&adult={adult}&children={children}'
         return HttpResponseRedirect(url_with_params)
@@ -58,12 +56,10 @@ def add_to_selection(request):
             request.session['selection_date_obj'] = selection_date
     else:
         request.session['selection_date_obj'] = room_selection
-
     data = {
         'data': request.session['selection_date_obj'],
         'fruit': 'banana',
         'name': 'Ali Ahmad Ataie',
         'total_selected_items': request.session['selection_date_obj']
     }
-
     return JsonResponse(data)
