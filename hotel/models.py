@@ -171,6 +171,7 @@ class Room(models.Model):
     
     def __str__(self):
         return self.room_type.price
+
     
     def price(self):
         return self.room_type.price
