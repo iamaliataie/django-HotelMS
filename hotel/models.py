@@ -100,6 +100,7 @@ class HotelFeature(models.Model):
     icon = models.CharField(max_length=100, null=True, blank=True)
     name = models.CharField(max_length=100, null=True, blank=True)
 
+    
     class Meta:
         verbose_name_plural = 'Hotel Features'
 
