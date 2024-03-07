@@ -203,6 +203,7 @@ class ActivityLog(models.Model):
     booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
     guess_out = models.DateTimeField()
     guess_in = models.DateTimeField()
+    
     description = models.TextField(null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
 
