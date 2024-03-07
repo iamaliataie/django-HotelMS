@@ -85,6 +85,7 @@ class HotelGallery(models.Model):
     image = models.FileField(upload_to='hotel_gallery')
     hgid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
 
+    
     class Meta:
         verbose_name_plural = 'Hotel Gallery'
 
