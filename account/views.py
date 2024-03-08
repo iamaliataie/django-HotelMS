@@ -25,7 +25,6 @@ def register(request):
         profile.phone = phone
         profile.save()
         return redirect('hotel:home')
-
     context = {
         'form': form
     }
