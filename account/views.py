@@ -9,7 +9,6 @@ def register(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are already logged in.')
         return redirect('hotel:home')
-        
     form = UserRegistrationForm(request.POST or None)
     if form.is_valid():
         form.save()
@@ -17,32 +16,26 @@ def register(request):
         phone = form.cleaned_data.get('phone')
         email = form.cleaned_data.get('email')
         password = form.cleaned_data.get('password1')
-
         user = authenticate(email=email, password=password)
         login(request, user)
         messages.success(request, f'Hey {full_name}, your account has been created succussfully.')
-
         profile = Profile.objects.get(user=request.user)
         profile.full_name = full_name
         profile.phone = phone
         profile.save()
         return redirect('hotel:home')
-
     context = {
         'form': form
     }
-    
     return render(request, 'account/signup.html', context)
 
 def login_view(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are logged in.')
         return redirect('hotel:home')
-    
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-
         try:
             user = authenticate(request, email=email, password=password)
             if user:
@@ -56,7 +49,6 @@ def login_view(request):
         except:
             messages.error(request, 'Username or password does not exist')
             return redirect('account:login')
-            
     return render(request, 'account/login.html')
 
 def logout_view(request):

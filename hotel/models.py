@@ -42,7 +42,6 @@ class Hotel(models.Model):
     name = models.CharField(max_length=100)
     description = CKEditor5Field(null=True, blank=True, config_name='extends')
     image = models.FileField(upload_to='hotel_gallery')
-    
     address = models.CharField(max_length=200)
     mobile = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
@@ -50,15 +49,12 @@ class Hotel(models.Model):
     tags = TaggableManager(blank=True)
     views = models.IntegerField(default=0)
     featured = models.BooleanField(default=False)
-    
     hid = ShortUUIDField(unique=True, length=10, max_length=20, alphabet='abcdefghijklmnopqrstuvwxyz')
     slug = models.SlugField(unique=True)
     date = models.DateTimeField(auto_now_add=True)
 
-    
     def __str__(self):
         return self.name
-
     
     def save(self, *args, **kwargs):
         if self.slug == '' or self.slug == None:
@@ -67,14 +63,11 @@ class Hotel(models.Model):
             self.slug = slugify(self.name) + '-' + str(uniqeid)
         super(Hotel, self).save(*args, **kwargs)
 
-    
     def thumbnail(self):
         return mark_safe(f"<img src='{self.image.url}' width='50px' height='50px' style='object-fit:cover; border-radius:6px;' />")
 
-    
     def hotel_gallery(self):
         return HotelGallery.objects.filter(hotel=self)
-
     
     def hotel_rooms_types(self):
         return RoomType.objects.filter(hotel=self)

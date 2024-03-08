@@ -13,6 +13,7 @@ from hotel.models import (
     RoomType,
 )
 
+
 @csrf_exempt
 def check_room_availability(request):
     if request.method == 'POST':
@@ -56,10 +57,12 @@ def add_to_selection(request):
             request.session['selection_date_obj'] = selection_date
     else:
         request.session['selection_date_obj'] = room_selection
+        
     data = {
         'data': request.session['selection_date_obj'],
         'fruit': 'banana',
         'name': 'Ali Ahmad Ataie',
         'total_selected_items': request.session['selection_date_obj']
     }
+    
     return JsonResponse(data)
