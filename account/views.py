@@ -17,7 +17,6 @@ def register(request):
         phone = form.cleaned_data.get('phone')
         email = form.cleaned_data.get('email')
         password = form.cleaned_data.get('password1')
-
         user = authenticate(email=email, password=password)
         login(request, user)
         messages.success(request, f'Hey {full_name}, your account has been created succussfully.')
