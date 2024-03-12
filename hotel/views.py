@@ -43,3 +43,5 @@ def selectd_rooms(request):
     children = 0
     checkin = 0
     checkout = 0
+
+    if 'selected_data_obj' in request.session:
