@@ -44,7 +44,7 @@ def selectd_rooms(request):
     adult = 0
     children = 0
     checkin = ''
-    checkout = 0
+    checkout = ''
 
     if 'selected_data_obj' in request.session:
         for h_id, item in request.session['selection_data_obj'].items():
