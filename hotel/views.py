@@ -78,6 +78,7 @@ def selectd_rooms(request):
             'adult': adult,
             'children': children,
             'checkin': checkin,
+            'checkout': checkout,
         }
 
         return render(request, 'hotel/selected_rooms.html')
