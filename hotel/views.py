@@ -69,6 +69,11 @@ def selectd_rooms(request):
             
             room_price = price * room_count
             total = room_price * days
+        
+        context = {
+            
+        }
+
         return render(request, 'hotel/selected_rooms.html')
     else:
         message.warning(request, 'No selected rooms yet')
