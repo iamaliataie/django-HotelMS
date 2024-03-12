@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib import messages
+from datetime import datetime
 from .models import Hotel, Booking, ActivityLog, RoomType, Room
 
 def index(request):
@@ -34,3 +36,53 @@ def room_type_detail(request, slug, rt_slug):
         'children': children,
     }
     return render(request, 'hotel/room_type_detail.html', context)
+
+def selectd_rooms(request):
+    total = 0
+    room_count = 0
+    total_days = 0
+    adult = 0
+    children = 0
+    checkin = ''
+    checkout = ''
+
+    if 'selected_data_obj' in request.session:
+        for h_id, item in request.session['selection_data_obj'].items():
+            id = int(item['hotel_id'])
+            checkin = item['checkin']
+            checkout = item['checkout']
+            adult = int(item['adult'])
+            children = int(item['children'])
+            room_type = int(item['room_type'])
+            room_id = int(item['room_id'])
+
+            room_type = RoomType.objects.get(id=room_type)
+            date_format = '%Y-%m-%d'
+            checkin_date = datetime.strptime(checkin, date_format)
+            checkout_date = datetime.strptime(checkout, date_format)
+            time_difference = checkout_date - checkin_date
+            total_days = time_difference.days
+
+            room_count += 1
+            days = total_days
+            price = room_type.price
+            
+            room_price = price * room_count
+            total = room_price * days
+        
+        context = {
+            'data': request.session['selected_data_obj'],
+            'total_selected_items': len(request.session['selected_data_obj']),
+            'total': total,
+            'total_days': total_days,
+            'adult': adult,
+            'children': children,
+            'checkin': checkin,
+            'checkout': checkout,
+            'hotel': hotel,
+        }
+
+        return render(request, 'hotel/selected_rooms.html')
+    else:
+        message.warning(request, 'No selected rooms yet')
+        return redirect('/')
