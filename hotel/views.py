@@ -37,3 +37,4 @@ def room_type_detail(request, slug, rt_slug):
 
 def selectd_rooms(request):
     total = 0
+    room_count = 0
