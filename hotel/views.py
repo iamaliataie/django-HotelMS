@@ -39,3 +39,4 @@ def selectd_rooms(request):
     total = 0
     room_count = 0
     total_days = 0
+    adult = 0
