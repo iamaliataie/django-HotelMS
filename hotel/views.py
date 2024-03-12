@@ -62,6 +62,8 @@ def selectd_rooms(request):
             checkout_date = datetime.strptime(checkout, date_format)
             time_difference = checkout_date - checkin_date
             total_days = time_difference.days
+
+            room_count += 1
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
