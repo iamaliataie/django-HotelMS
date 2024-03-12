@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from datetime import datetime
 from .models import Hotel, Booking, ActivityLog, RoomType, Room
 
 def index(request):
