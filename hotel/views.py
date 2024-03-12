@@ -43,7 +43,7 @@ def selectd_rooms(request):
     total_days = 0
     adult = 0
     children = 0
-    checkin = 0
+    checkin = ''
     checkout = 0
 
     if 'selected_data_obj' in request.session:
