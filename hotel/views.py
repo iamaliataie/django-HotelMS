@@ -49,4 +49,4 @@ def selectd_rooms(request):
         for h_id, item in request.session['selection_data_obj'].items():
             print(h_id, item)
     else:
-        message.warning
+        message.warning(request, 'No selected rooms yet')
