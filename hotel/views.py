@@ -42,3 +42,4 @@ def selectd_rooms(request):
     adult = 0
     children = 0
     checkin = 0
+    checkout = 0
