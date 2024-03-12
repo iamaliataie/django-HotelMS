@@ -50,6 +50,7 @@ def selectd_rooms(request):
             id = int(item['hotel_id'])
             checkin = int(item['checkin'])
             checkout = int(item['checkout'])
+            adult = int(item['adult'])
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
