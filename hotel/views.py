@@ -53,6 +53,7 @@ def selectd_rooms(request):
             adult = int(item['adult'])
             children = int(item['children'])
             room_type = int(item['room_type'])
+            room_id = int(item['room_id'])
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
