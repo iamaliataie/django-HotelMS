@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from .models import Hotel, Booking, ActivityLog, RoomType, Room
 
 def index(request):
@@ -47,3 +48,5 @@ def selectd_rooms(request):
     if 'selected_data_obj' in request.session:
         for h_id, item in request.session['selection_data_obj'].items():
             print(h_id, item)
+    else:
+        message.warning
