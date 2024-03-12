@@ -49,7 +49,7 @@ def selectd_rooms(request):
     if 'selected_data_obj' in request.session:
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
-            checkin = int(item['checkin'])
+            checkin = item['checkin']
             checkout = int(item['checkout'])
             adult = int(item['adult'])
             children = int(item['children'])
