@@ -50,3 +50,4 @@ def selectd_rooms(request):
             print(h_id, item)
     else:
         message.warning(request, 'No selected rooms yet')
+        return redirect('/')
