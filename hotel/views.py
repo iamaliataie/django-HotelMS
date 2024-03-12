@@ -58,6 +58,7 @@ def selectd_rooms(request):
 
             room_type = RoomType.objects.get(id=room_type)
             date_format = '%Y-%m-%d'
+            checkin_date = datetime.strptime(checkin, date_format)
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
