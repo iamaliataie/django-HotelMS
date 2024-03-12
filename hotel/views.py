@@ -74,6 +74,7 @@ def selectd_rooms(request):
             'data': request.session['selected_data_obj'],
             'total_selected_items': len(request.session['selected_data_obj']),
             'total': total,
+            'total_days': total_days,
         }
 
         return render(request, 'hotel/selected_rooms.html')
