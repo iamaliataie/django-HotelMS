@@ -71,7 +71,8 @@ def selectd_rooms(request):
             total = room_price * days
         
         context = {
-            'data': request.session['selected_data_obj']
+            'data': request.session['selected_data_obj'],
+            'total_selected_items': len(request.session['selected_data_obj']),
         }
 
         return render(request, 'hotel/selected_rooms.html')
