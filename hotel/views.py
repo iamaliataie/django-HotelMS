@@ -51,4 +51,4 @@ def selectd_rooms(request):
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
-    return render(request,)
+    return render(request, 'hotel/selected_rooms.html')
