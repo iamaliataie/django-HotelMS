@@ -76,6 +76,7 @@ def selectd_rooms(request):
             'total': total,
             'total_days': total_days,
             'adult': adult,
+            'children': children,
         }
 
         return render(request, 'hotel/selected_rooms.html')
