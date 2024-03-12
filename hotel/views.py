@@ -68,6 +68,7 @@ def selectd_rooms(request):
             price = room_type.price
             
             room_price = price * room_count
+            total = room_price * days
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
