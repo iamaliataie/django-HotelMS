@@ -34,3 +34,5 @@ def room_type_detail(request, slug, rt_slug):
         'children': children,
     }
     return render(request, 'hotel/room_type_detail.html', context)
+
+def selectd_rooms(request):
