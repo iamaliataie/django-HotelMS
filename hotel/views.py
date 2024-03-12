@@ -48,6 +48,7 @@ def selectd_rooms(request):
     if 'selected_data_obj' in request.session:
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
+            checkin = int(item['checkin'])
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
