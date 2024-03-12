@@ -64,6 +64,7 @@ def selectd_rooms(request):
             total_days = time_difference.days
 
             room_count += 1
+            days = total_days
     else:
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
