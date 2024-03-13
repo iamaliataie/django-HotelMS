@@ -69,7 +69,6 @@ def selectd_rooms(request):
             
             room_price = price * room_count
             total = room_price * days
-        
         context = {
             'data': request.session['selected_data_obj'],
             'total_selected_items': len(request.session['selected_data_obj']),
