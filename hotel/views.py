@@ -66,7 +66,6 @@ def selectd_rooms(request):
             room_count += 1
             days = total_days
             price = room_type.price
-            
             room_price = price * room_count
             total = room_price * days
         context = {
