@@ -69,6 +69,7 @@ def selectd_rooms(request):
             email = request.POST.get('email')
             phone = request.POST.get('phone')
             booking = Booking.objects.create(
+                hotel=hotel,
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
