@@ -66,6 +66,7 @@ def selectd_rooms(request):
             time_difference = checkout_date - checkin_date
             total_days = time_difference.days
             full_name = request.POST.get('full_name')
+            email = request.POST.get('email')
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
