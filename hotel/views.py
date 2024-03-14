@@ -49,6 +49,7 @@ def selectd_rooms(request):
     if 'selected_data_obj' in request.session:
         if request.method == 'POST':
             for h_id, item in request.session['selection_data_obj'].items():
+                id = int(item['hotel_id'])
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
