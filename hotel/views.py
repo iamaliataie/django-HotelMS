@@ -63,6 +63,7 @@ def selectd_rooms(request):
             date_format = '%Y-%m-%d'
             checkin_date = datetime.strptime(checkin, date_format)
             checkout_date = datetime.strptime(checkout, date_format)
+            time_difference = checkout_date - checkin_date
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
