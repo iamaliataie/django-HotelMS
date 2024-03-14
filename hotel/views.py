@@ -75,6 +75,7 @@ def selectd_rooms(request):
                 check_out_date=checkout,
                 total_days=total_days,
                 num_adults=adult,
+                num_children=children,
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
