@@ -88,6 +88,8 @@ def selectd_rooms(request):
                 room_count += 1
                 days = total_days
                 price = room_type.price
+                
+                room_price = price * room_count
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
