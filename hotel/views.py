@@ -94,6 +94,7 @@ def selectd_rooms(request):
             booking.total += float(total)
             booking.before_discount += float(total)
             booking.save()
+            return render('hotel:checkout', booking.booking_id)
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
