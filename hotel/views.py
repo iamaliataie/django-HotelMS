@@ -86,6 +86,7 @@ def selectd_rooms(request):
                 room = Room.objects.get(id=room_id)
                 booking.room.add(room)
                 room_count += 1
+                days = total_days
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
