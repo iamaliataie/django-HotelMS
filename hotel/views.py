@@ -99,6 +99,7 @@ def selectd_rooms(request):
                 
                 room_price = price * room_count
                 total = room_price * days
+                
             booking.total += float(total)
             booking.before_discount += float(total)
             booking.save()
