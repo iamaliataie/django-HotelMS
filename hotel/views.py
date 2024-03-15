@@ -139,6 +139,7 @@ def selectd_rooms(request):
             'checkout': checkout,
             'hotel': hotel,
         }
+        
         return render(request, 'hotel/selected_rooms.html')
     else:
         message.warning(request, 'No selected rooms yet')
