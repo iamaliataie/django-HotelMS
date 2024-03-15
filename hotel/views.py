@@ -114,6 +114,7 @@ def selectd_rooms(request):
             children = int(item['children'])
             room_type = int(item['room_type'])
             room_id = int(item['room_id'])
+            
             room_type = RoomType.objects.get(id=room_type)
             date_format = '%Y-%m-%d'
             checkin_date = datetime.strptime(checkin, date_format)
