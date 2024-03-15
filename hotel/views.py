@@ -27,6 +27,7 @@ def room_type_detail(request, slug, rt_slug):
     checkout = request.GET.get('checkout')
     adult = request.GET.get('adult')
     childred = request.GET.get('childred')
+    
     context = {
         'hotel': hotel,
         'room_type': room_type,
