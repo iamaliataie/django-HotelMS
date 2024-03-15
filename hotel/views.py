@@ -72,6 +72,7 @@ def selectd_rooms(request):
             full_name = request.POST.get('full_name')
             email = request.POST.get('email')
             phone = request.POST.get('phone')
+            
             booking = Booking.objects.create(
                 hotel=hotel,
                 room_type=room_type,
