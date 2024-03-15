@@ -59,6 +59,7 @@ def selectd_rooms(request):
                 children = int(item['children'])
                 room_type = int(item['room_type'])
                 room_id = int(item['room_id'])
+                
                 user = request.user
                 hotel = Hotel.objects.get(id=id)
                 room = Room.objects.get(id=room_id)
