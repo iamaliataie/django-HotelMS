@@ -70,6 +70,7 @@ def selectd_rooms(request):
             checkout_date = datetime.strptime(checkout, date_format)
             time_difference = checkout_date - checkin_date
             total_days = time_difference.days
+            
             full_name = request.POST.get('full_name')
             email = request.POST.get('email')
             phone = request.POST.get('phone')
