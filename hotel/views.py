@@ -86,6 +86,7 @@ def selectd_rooms(request):
                 phone=phone,
                 user=request.user or None
             )
+            
             for h_id, item in request.session['selection_data_obj'].items():
                 room_id = int(item['room_id'])
                 room = Room.objects.get(id=room_id)
