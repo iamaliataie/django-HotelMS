@@ -101,6 +101,7 @@ def selectd_rooms(request):
             booking.before_discount += float(total)
             booking.save()
             return render('hotel:checkout', booking.booking_id)
+            
         hotel = None
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
