@@ -9,6 +9,7 @@ def index(request):
     context = {
         'hotels': hotels
     }
+    
     return render(request, 'hotel/index.html', context)
 
 def hotel_detail(request, slug):
