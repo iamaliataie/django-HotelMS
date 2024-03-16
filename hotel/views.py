@@ -5,6 +5,7 @@ from .models import Hotel, Booking, ActivityLog, RoomType, Room
 
 def index(request):
     hotels = Hotel.objects.filter(status='live')
+    
     context = {
         'hotels': hotels
     }
