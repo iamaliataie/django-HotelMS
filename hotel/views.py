@@ -14,6 +14,7 @@ def index(request):
 
 def hotel_detail(request, slug):
     hotel = Hotel.objects.get(status='live', slug=slug)
+    
     context = {
         'hotel': hotel
     }
