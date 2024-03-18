@@ -132,8 +132,9 @@ def selectd_rooms(request):
 
 def checkout(request, booking_id):
     booking = Booking.objects.get(booking_id=booking_id)
-    
+
     context = {
         'booking': booking
     }
+    
     return render(request, 'hotel/checkout.html', context)
