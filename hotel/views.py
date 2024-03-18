@@ -135,4 +135,4 @@ def checkout(request, booking_id):
     context = {
         'booking': booking
     }
-    return render(request, 'hotel/checkout.html')
+    return render(request, 'hotel/checkout.html', context)
