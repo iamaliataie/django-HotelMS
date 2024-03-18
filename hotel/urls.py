@@ -8,5 +8,5 @@ urlpatterns = [
     path('detail/<slug>/', views.hotel_detail, name='hotel_detail'),
     path('detail/<slug:slug>/room-type/<slug:rt_slug>/', views.room_type_detail, name='room_type_detail'),
     path('selected_rooms/', views.selectd_rooms, name='selected_rooms'),
-    path('ROUTE/', VIEW.as_view(), name=''),
+    path('checkout/', VIEW.as_view(), name=''),
 ]
