@@ -131,4 +131,4 @@ def selectd_rooms(request):
         return redirect('/')
 
 def checkout(request, booking_id):
-    booking = Booking.objects.get()
+    booking = Booking.objects.get(booking_id=booking_id)
