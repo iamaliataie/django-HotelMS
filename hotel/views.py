@@ -26,6 +26,7 @@ def room_type_detail(request, slug, rt_slug):
     checkout = request.GET.get('checkout')
     adult = request.GET.get('adult')
     childred = request.GET.get('childred')
+    
     context = {
         'hotel': hotel,
         'room_type': room_type,
@@ -35,6 +36,7 @@ def room_type_detail(request, slug, rt_slug):
         'adult': adult,
         'children': children,
     }
+    
     return render(request, 'hotel/room_type_detail.html', context)
 
 def selectd_rooms(request):
@@ -45,6 +47,7 @@ def selectd_rooms(request):
     children = 0
     checkin = ''
     checkout = ''
+    
     if 'selected_data_obj' in request.session:
         if request.method == 'POST':
             for h_id, item in request.session['selection_data_obj'].items():
@@ -55,18 +58,22 @@ def selectd_rooms(request):
                 children = int(item['children'])
                 room_type = int(item['room_type'])
                 room_id = int(item['room_id'])
+                
                 user = request.user
                 hotel = Hotel.objects.get(id=id)
                 room = Room.objects.get(id=room_id)
                 roome_type = RoomType.objects.get(id=roome_type)
+                
             date_format = '%Y-%m-%d'
             checkin_date = datetime.strptime(checkin, date_format)
             checkout_date = datetime.strptime(checkout, date_format)
             time_difference = checkout_date - checkin_date
             total_days = time_difference.days
+            
             full_name = request.POST.get('full_name')
             email = request.POST.get('email')
             phone = request.POST.get('phone')
+            
             booking = Booking.objects.create(
                 hotel=hotel,
                 room_type=room_type,
@@ -80,6 +87,7 @@ def selectd_rooms(request):
                 phone=phone,
                 user=request.user or None
             )
+            
             for h_id, item in request.session['selection_data_obj'].items():
                 room_id = int(item['room_id'])
                 room = Room.objects.get(id=room_id)
@@ -90,10 +98,12 @@ def selectd_rooms(request):
                 
                 room_price = price * room_count
                 total = room_price * days
+                
             booking.total += float(total)
             booking.before_discount += float(total)
             booking.save()
             return render('hotel:checkout', booking.booking_id)
+            
         hotel = None
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
@@ -103,17 +113,20 @@ def selectd_rooms(request):
             children = int(item['children'])
             room_type = int(item['room_type'])
             room_id = int(item['room_id'])
+            
             room_type = RoomType.objects.get(id=room_type)
             date_format = '%Y-%m-%d'
             checkin_date = datetime.strptime(checkin, date_format)
             checkout_date = datetime.strptime(checkout, date_format)
             time_difference = checkout_date - checkin_date
             total_days = time_difference.days
+            
             room_count += 1
             days = total_days
             price = room_type.price
             room_price = price * room_count
             total = room_price * days
+            
         context = {
             'data': request.session['selected_data_obj'],
             'total_selected_items': len(request.session['selected_data_obj']),
@@ -125,6 +138,7 @@ def selectd_rooms(request):
             'checkout': checkout,
             'hotel': hotel,
         }
+        
         return render(request, 'hotel/selected_rooms.html')
     else:
         message.warning(request, 'No selected rooms yet')
