@@ -130,4 +130,4 @@ def selectd_rooms(request):
         message.warning(request, 'No selected rooms yet')
         return redirect('/')
 
-
+def checkout(request):
