@@ -41,6 +41,7 @@ class Profile(models.Model):
     image = models.FileField(upload_to=user_directory_path, default='default.jpg')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=500, null=True, blank=True)
+    
     phone = models.CharField(max_length=100, null=True, blank=True)
     gender = models.CharField(max_length=20, choices=GENDER, default='Other')
     country = models.CharField(max_length=100, null=True, blank=True)
