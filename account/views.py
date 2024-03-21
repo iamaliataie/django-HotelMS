@@ -47,6 +47,7 @@ def login_view(request):
         
         try:
             user = authenticate(request, email=email, password=password)
+            
             if user:
                 login(request, user)
                 messages.success(request, 'Welcome back.')
