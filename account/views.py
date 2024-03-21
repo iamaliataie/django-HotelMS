@@ -11,6 +11,7 @@ def register(request):
         return redirect('hotel:home')
         
     form = UserRegistrationForm(request.POST or None)
+    
     if form.is_valid():
         form.save()
         full_name = form.cleaned_data.get('full_name')
