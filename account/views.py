@@ -27,6 +27,7 @@ def register(request):
         profile.full_name = full_name
         profile.phone = phone
         profile.save()
+        
         return redirect('hotel:home')
     context = {
         'form': form
