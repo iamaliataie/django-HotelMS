@@ -29,6 +29,7 @@ def register(request):
         profile.save()
         
         return redirect('hotel:home')
+        
     context = {
         'form': form
     }
