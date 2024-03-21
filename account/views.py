@@ -21,6 +21,7 @@ def register(request):
         
         user = authenticate(email=email, password=password)
         login(request, user)
+        
         messages.success(request, f'Hey {full_name}, your account has been created succussfully.')
         profile = Profile.objects.get(user=request.user)
         profile.full_name = full_name
