@@ -40,6 +40,7 @@ def login_view(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are logged in.')
         return redirect('hotel:home')
+        
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
