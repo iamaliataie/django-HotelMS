@@ -9,7 +9,6 @@ GENDER = (
     ('Male', 'Male'),
     ('Other', 'Other')
 )
-
 IDENTITY_TYPE = (
     ('NIN', 'National Identication Number'),
     ('DL', 'Driving License'),
