@@ -58,6 +58,7 @@ def login_view(request):
         except:
             messages.error(request, 'Username or password does not exist')
             return redirect('account:login')
+            
     return render(request, 'account/login.html')
 
 def logout_view(request):
