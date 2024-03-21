@@ -33,6 +33,7 @@ def register(request):
     context = {
         'form': form
     }
+    
     return render(request, 'account/signup.html', context)
 
 def login_view(request):
