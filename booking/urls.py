@@ -15,4 +15,9 @@ urlpatterns = [
         views.add_to_selection,
         name='add_to_selection'
     ),
+    path(
+        'ROUTE/',
+        VIEW.as_view(),
+        name=''
+    ),
 ]
