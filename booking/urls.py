@@ -15,4 +15,9 @@ urlpatterns = [
         views.add_to_selection,
         name='add_to_selection'
     ),
+    path(
+        'delete_selection/',
+        views.delet_selection,
+        name='delete_selection'
+    ),
 ]
