@@ -100,3 +100,4 @@ def delet_selection(request):
             total_days = time_difference.days
             
             room_count += 1
+            days = total_days
