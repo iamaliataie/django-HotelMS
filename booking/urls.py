@@ -16,7 +16,7 @@ urlpatterns = [
         name='add_to_selection'
     ),
     path(
-        'ROUTE/',
+        'delete_selection/',
         VIEW.as_view(),
         name=''
     ),
