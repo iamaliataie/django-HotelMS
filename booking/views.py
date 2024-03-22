@@ -76,4 +76,5 @@ def delet_selection(request):
             request.session['selection_data_obj'] = selection_data
 
     total = 0
+    total_day = 0
     
