@@ -117,5 +117,6 @@ def delet_selection(request):
             'adult': adult,
             'children': children,
             'checkin': checkin,
+            'checkout': checkout,
         }
     )
