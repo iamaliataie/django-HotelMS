@@ -18,6 +18,6 @@ urlpatterns = [
     path(
         'delete_selection/',
         views.delet_selection,
-        name=''
+        name='delete_selection'
     ),
 ]
