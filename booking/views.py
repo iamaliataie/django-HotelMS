@@ -72,4 +72,5 @@ def delet_selection(request):
     if 'selection_data_obj' in request.session:
         if hotel_id in request.session['selection_data.obj']:
             selection_data = request.session['selection_data_obj']
+            del request.session['selection_data_obj'][hotel_id]
             
