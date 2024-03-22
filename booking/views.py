@@ -92,3 +92,4 @@ def delet_selection(request):
             room_type = int(item['room_type'])
             room_id = int(item['room_id'])
             
+            room_type = RoomType.objects.get(id=room_type)
