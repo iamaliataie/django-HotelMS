@@ -111,5 +111,6 @@ def delet_selection(request):
         'hotel/async/selected_room.html',
         {
             'data': request.session['selection_data_obj'],
+            'total_selected_item': len(request.session['selection_data_obj']),
         }
     )
