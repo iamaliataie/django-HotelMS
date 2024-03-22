@@ -82,4 +82,5 @@ def delet_selection(request):
     children = 0
     checkin = 0
     checkout = 0
+    hotel = None
     
