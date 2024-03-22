@@ -88,3 +88,4 @@ def delet_selection(request):
             checkin = item['checkin']
             checkout = item['checkout']
             adult = int(item['adult'])
+            children = int(item['children'])
