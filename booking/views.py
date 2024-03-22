@@ -89,3 +89,4 @@ def delet_selection(request):
             checkout = item['checkout']
             adult = int(item['adult'])
             children = int(item['children'])
+            room_type = int(item['room_type'])
