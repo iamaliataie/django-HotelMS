@@ -109,4 +109,7 @@ def delet_selection(request):
 
     context = render_to_string(
         'hotel/async/selected_room.html',
+        {
+            'data': request.session['selection_data_obj'],
+        }
     )
