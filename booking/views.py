@@ -101,3 +101,4 @@ def delet_selection(request):
             
             room_count += 1
             days = total_days
+            price = room_type.price
