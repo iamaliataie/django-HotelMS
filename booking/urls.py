@@ -17,7 +17,7 @@ urlpatterns = [
     ),
     path(
         'delete_selection/',
-        VIEW.as_view(),
+        views.delet_selection,
         name=''
     ),
 ]
