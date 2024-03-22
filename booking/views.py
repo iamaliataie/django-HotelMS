@@ -66,3 +66,5 @@ def add_to_selection(request):
     }
     
     return JsonResponse(data)
+
+def delet_selection(request):
