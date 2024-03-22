@@ -3,6 +3,8 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
+from django.template.loader import render_to_string
+
 from hotel.models import (
     Hotel, 
     Booking, 
