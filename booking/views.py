@@ -118,5 +118,6 @@ def delet_selection(request):
             'children': children,
             'checkin': checkin,
             'checkout': checkout,
+            'hotel': hotel,
         }
     )
