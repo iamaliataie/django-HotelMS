@@ -113,5 +113,6 @@ def delet_selection(request):
             'data': request.session['selection_data_obj'],
             'total_selected_item': len(request.session['selection_data_obj']),
             'total': total,
+            'total_days': total_days,
         }
     )
