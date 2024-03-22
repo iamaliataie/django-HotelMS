@@ -116,5 +116,6 @@ def delet_selection(request):
             'total_days': total_days,
             'adult': adult,
             'children': children,
+            'checkin': checkin,
         }
     )
