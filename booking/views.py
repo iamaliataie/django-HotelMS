@@ -121,3 +121,4 @@ def delet_selection(request):
             'hotel': hotel,
         }
     )
+    return JsonResponse()
