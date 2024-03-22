@@ -106,3 +106,7 @@ def delet_selection(request):
             price = room_type.price
             room_price = price * room_count
             total = room_price * days
+
+    context = render_to_string(
+        
+    )
