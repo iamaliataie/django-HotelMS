@@ -68,3 +68,4 @@ def add_to_selection(request):
     return JsonResponse(data)
 
 def delet_selection(request):
+    hotel_id = str(request.GET.get('id'))
