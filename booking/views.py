@@ -87,3 +87,4 @@ def delet_selection(request):
             id = int(item['hotel_id'])
             checkin = item['checkin']
             checkout = item['checkout']
+            adult = int(item['adult'])
