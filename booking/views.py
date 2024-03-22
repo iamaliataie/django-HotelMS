@@ -81,4 +81,5 @@ def delet_selection(request):
     adult = 0
     children = 0
     checkin = 0
+    checkout = 0
     
