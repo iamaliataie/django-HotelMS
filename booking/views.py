@@ -103,3 +103,4 @@ def delet_selection(request):
             days = total_days
             price = room_type.price
             room_price = price * room_count
+            total = room_price * days
