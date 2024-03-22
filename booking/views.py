@@ -108,5 +108,5 @@ def delet_selection(request):
             total = room_price * days
 
     context = render_to_string(
-        
+        'hotel/async/selected_room.html',
     )
