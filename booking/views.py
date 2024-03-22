@@ -121,4 +121,8 @@ def delet_selection(request):
             'hotel': hotel,
         }
     )
-    return JsonResponse()
+    return JsonResponse(
+        {
+            'data': context,
+        }
+    )
