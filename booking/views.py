@@ -91,3 +91,4 @@ def delet_selection(request):
             children = int(item['children'])
             room_type = int(item['room_type'])
             room_id = int(item['room_id'])
+            
