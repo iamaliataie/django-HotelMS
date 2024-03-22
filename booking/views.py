@@ -124,5 +124,6 @@ def delet_selection(request):
     return JsonResponse(
         {
             'data': context,
+            'total_selected_item': len(request.session['selection_data_obj']),
         }
     )
