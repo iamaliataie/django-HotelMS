@@ -69,3 +69,4 @@ def add_to_selection(request):
 
 def delet_selection(request):
     hotel_id = str(request.GET.get('id'))
+    if 'selection_data_obj' in request.session:
