@@ -93,3 +93,4 @@ def delet_selection(request):
             room_id = int(item['room_id'])
             
             room_type = RoomType.objects.get(id=room_type)
+            date_format = '%Y-%m-%d'
