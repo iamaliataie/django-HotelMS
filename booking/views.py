@@ -86,3 +86,4 @@ def delet_selection(request):
         for h_id, item in request.session['selection_data_obj'].items():
             id = int(item['hotel_id'])
             checkin = item['checkin']
+            checkout = item['checkout']
