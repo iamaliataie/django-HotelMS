@@ -80,4 +80,5 @@ def delet_selection(request):
     room_count = 0
     adult = 0
     children = 0
+    checkin = 0
     
