@@ -96,3 +96,4 @@ def delet_selection(request):
             date_format = '%Y-%m-%d'
             checkin_date = datetime.strptime(checkin, date_format)
             checkout_date = datetime.strptime(checkout, date_format)
+            time_difference = checkout_date - checkin_date
