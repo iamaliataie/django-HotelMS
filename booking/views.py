@@ -79,6 +79,7 @@ def delet_selection(request):
             selection_data = request.session['selection_data_obj']
             del request.session['selection_data_obj'][hotel_id]
             request.session['selection_data_obj'] = selection_data
+            
     total = 0
     total_day = 0
     room_count = 0
